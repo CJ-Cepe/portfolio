@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+  --font1: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --yellow1: #FCFD96;
+  --yellow2: #FCFD96;
+  --black1: #000000;
+  --gray1: #313131;
+}
