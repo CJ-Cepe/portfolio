@@ -1,13 +1,16 @@
+import './styles/Nav.css'
+import sun from '../public/sun.svg'
 function Nav(){
     return (
         <nav>
-            <div>CEPE</div>
+            <div>&lt;CEPE/&gt;</div>
             <ul>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#"></a>Skills</li>
-                <li><a href="#"></a>Projects</li>
-                <li><a href="#"></a>Contact</li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
+            <button><img src={sun} alt="sun icon for lightmode" /></button>
         </nav>
     )
 }
