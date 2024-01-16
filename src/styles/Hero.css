@@ -17,6 +17,11 @@
     line-height: 1;
 }
 
+/* .hero > h1::before{
+    content: "👋";
+    position: absolute;
+} */
+
 .hero > h1 > em{
     display: block;
     font-size: 7rem;
