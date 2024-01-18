@@ -3,6 +3,9 @@
 }
 
 .hero {
+    background-color: var(--white1);
+    border-radius: 20px;
+    border: black solid 2px;
     height: 89vh;
     text-align: center;
 

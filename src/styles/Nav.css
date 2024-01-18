@@ -4,9 +4,10 @@
 
 header {
     height: 11vh;
-    background-color: var(--yellow1);
-    border-bottom: black solid 3px;
+    background-color: var(--white1);
+    border: black solid 2px;
     font-size: 2rem;
+    border-radius: 20px;
 }
 
 header > nav {
@@ -18,6 +19,7 @@ header > nav {
 
 /* website logo */
 nav > div {
+    font-size: 1.5rem;
     font-weight: bolder;
     width: 200px;
     border-right: black solid 3px;
