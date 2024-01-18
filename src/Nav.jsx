@@ -3,7 +3,7 @@ import sun from '../public/sun.svg'
 function Nav(){
     return (
         <nav>
-            <div>&lt;CEPE/&gt;</div>
+            <div>&lt;CJ Cepe/&gt;</div>
             <ul>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Skills</a></li>
