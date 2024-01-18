@@ -1,0 +1,34 @@
+{
+    "About": {
+        "background": {
+            "firstParagraph": "I am a Computer Science fresh graduate with a passion for web/software development and UI/UX design. Currently seeking opportunities in a career-oriented environment that fosters both personal growth and professional development.",
+            "secondParagraph": "My goal is to leverage my skills to create impactful and user-friendly applications, while continuously learning and growing in the field."
+        },
+        "experience": {
+            "main": "Creative Gemini OPC",
+            "secondary": "Process And System Analyst Intern",
+            "location": "Makati City",
+            "date": "2021",
+            "details": [
+                "Designed company chatbot's conversation flow",
+                "Authored a UI/UX design guideline for consistent project design",
+                "Provided versatile support as required"
+            ]
+        },
+        "education": {
+            "main": "Polytechnic University of the Philippines",
+            "secondary": "Bachelor of Science in Computer Science",
+            "location": "Manila City",
+            "date": "2018-2023",
+            "details": [
+                "President's Lister and Dean's Lister."
+            ]
+        },
+        "training": [
+            {"name": "Civil Service Exam (Professional level)", "date": "2023"},
+            {"name": "The Odin Project", "date": "2023-present"},
+            {"name": "WordPress, Marketing, Copywriting, and Facebook Ads Training", "date": "2021"},
+            {"name": "Employability Skills for 21st Century Learners", "date": "2017"}
+        ]
+    }
+}
