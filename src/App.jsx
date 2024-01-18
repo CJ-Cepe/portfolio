@@ -2,6 +2,8 @@ import { useState } from 'react'
 import Nav from './Nav'
 import Hero from './Hero'
 import About from './About'
+import Skills from './Skills'
+import Contact from './Contact'
 import './styles/App.css'
 
 function App() {
@@ -14,7 +16,12 @@ function App() {
     <main>
       <Hero/>
       <About/>
+      <Skills/>
+      <Contact/>
     </main>
+    <footer>
+    Copyright©2024, CJ-CEPE
+    </footer>
     </>
   )
 }
