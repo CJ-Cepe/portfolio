@@ -30,5 +30,26 @@
             {"name": "WordPress, Marketing, Copywriting, and Facebook Ads Training", "date": "2021"},
             {"name": "Employability Skills for 21st Century Learners", "date": "2017"}
         ]
+    }, 
+    "Skills": {
+        "technical": [
+            "HTML", "CSS", "Markdown", "JavaScript", "JSON", "React",
+            "Git & GitHub", "webpack", "Vite", "ESLint & Prettier", "Jest", "npm", 
+            "Xubuntu", "Windows"
+        ],
+        "design": [
+            "Figma", "Illustrator", "Notion", "MS Office Suite", "Google Docs"
+        ],
+        "communication": [
+            "Filipino", "English"
+        ],
+        "others": ["C/C++", "Java", "Python", "R", "PHP", "SQL", "Visual Basic", "Turbo C++", 
+            "Dev-C++", "Notepad++", "NetBeans", "IntelliJ IDEA", "VScode", "Jupyter Notebook", "Anaconda", "Google Collab", "RStudio", 
+            "Proteus", "MATLAB", "Cisco packet tracer", "Lucid Chart",
+            "Access", "MySql", 
+            "JavaFX Scene Builder", "Bootstrap Studio", "Photoshop", "Effect House", "Blender", "Unreal Engine", "Davinci Resolve", "Audacity",
+            "Obsidian",  
+            "Numpy", "Pandas", "Matplotlib", "TensorFlow", "Scikit-learn", "PyTorch", "Flask", "NodeJs", "Express"
+        ]
     }
 }
