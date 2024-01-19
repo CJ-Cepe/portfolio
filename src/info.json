@@ -34,7 +34,7 @@
     "Skills": {
         "technical": [
             "HTML", "CSS", "Markdown", "JavaScript", "JSON", "React",
-            "Git & GitHub", "webpack", "Vite", "ESLint & Prettier", "Jest", "npm", 
+            "Git & GitHub", "webpack", "Vite", "ESLint & Prettier", "Jest", "npm", "VSCode",
             "Xubuntu", "Windows"
         ],
         "design": [
@@ -44,12 +44,21 @@
             "Filipino", "English"
         ],
         "others": ["C/C++", "Java", "Python", "R", "PHP", "SQL", "Visual Basic", "Turbo C++", 
-            "Dev-C++", "Notepad++", "NetBeans", "IntelliJ IDEA", "VScode", "Jupyter Notebook", "Anaconda", "Google Collab", "RStudio", 
+            "Dev-C++", "Notepad++", "NetBeans", "IntelliJ IDEA", "Jupyter Notebook", "Anaconda", "Google Collab", "RStudio", 
             "Proteus", "MATLAB", "Cisco packet tracer", "Lucid Chart",
             "Access", "MySql", 
             "JavaFX Scene Builder", "Bootstrap Studio", "Photoshop", "Effect House", "Blender", "Unreal Engine", "Davinci Resolve", "Audacity",
             "Obsidian",  
             "Numpy", "Pandas", "Matplotlib", "TensorFlow", "Scikit-learn", "PyTorch", "Flask", "NodeJs", "Express"
         ]
-    }
+    },
+    "Projects": [
+        {"name": "Dino Page", "date": "2023", "link": "./assets/dino.png", "tools": ["html", "css"]},
+        {"name": "Dashboard", "date": "2023", "link": "./assets/dashboard.png", "tools": ["html", "css"]},
+        {"name": "Library", "date": "2023", "link": "./assets/library.png", "tools": ["html", "css", "js"]},
+        {"name": "Purrfect", "date": "2023", "link": "./assets/purrfect.png", "tools": ["html", "css"]},
+        {"name": "Rock Paper Scissor", "date": "2023", "link": "./assets/rps.png", "tools": ["html", "css", "js"]},
+        {"name": "Signup Page", "date": "2023", "link": "./assets/signup.png", "tools": ["html", "css"]},
+        {"name": "Etch a Sketch", "date": "2023", "link": "./assets/sketch.png", "tools": ["html", "css", "js"]}
+    ]
 }
