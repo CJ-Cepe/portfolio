@@ -1,6 +1,8 @@
+import './styles/Contact.css'
+
 function Contact(){
     return (
-        <section>
+        <section className='contact'>
             <h2>Philippines</h2>
             <h3>Antipolo City, 1870</h3>
             <ul>

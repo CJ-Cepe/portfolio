@@ -1,12 +1,15 @@
 import {Projects as data} from './info.json'
+import './styles/Project.css'
 
 function Card({name, date, link, tools}){
     const imgSrc = new URL(link, import.meta.url).href 
     const toolList = tools.map((tool, index) => <li key={index} className='tag'>{tool}</li>)
-    console.log(link)
+
     return (
         <div className="card">
-            <img src={imgSrc} alt="" />
+            <div>
+                <img src={imgSrc} alt="" />
+            </div>
             <p>{name}<span>{date}</span></p>
             <ul>{toolList}</ul>
         </div>
