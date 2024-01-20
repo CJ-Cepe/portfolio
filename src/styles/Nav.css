@@ -12,14 +12,13 @@ header {
 
 header > nav {
     height: 100%;
-    display: flex;
 
+    display: flex;
     justify-content: space-between;
 }
 
 /* website logo */
 nav > div {
-    font-size: 1.5rem;
     font-weight: bolder;
     width: 200px;
     border-right: black solid 3px;

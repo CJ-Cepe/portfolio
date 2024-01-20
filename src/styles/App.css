@@ -16,3 +16,14 @@ main {
 }
 
 
+footer {
+    font-size: 1rem;
+    border-radius: 20px;
+    border: 2px solid var(--black1);
+    background-color: var(--white1);
+    min-height: 8vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
