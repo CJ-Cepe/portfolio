@@ -8,8 +8,9 @@ function Experience() {
         )
     return (
         <div className="about-section">
-            <h2>{main} <span>{location}</span></h2>
-            <h3>{secondary} <span>{date}</span></h3>
+            <h2>Experience</h2>
+            <p>{main} <span>{location}</span></p>
+            <p>{secondary} <span>{date}</span></p>
             <ul>{detailList}</ul>
         </div>
     )
@@ -22,8 +23,9 @@ function Education() {
         )
     return (
         <div className="about-section">
-            <h2>{main} <span>{location}</span></h2>
-            <h3>{secondary} <span>{date}</span></h3>
+            <h2>Education</h2>
+            <p>{main} <span>{location}</span></p>
+            <p>{secondary} <span>{date}</span></p>
             <ul>{detailList}</ul>
         </div>
     )
@@ -31,28 +33,30 @@ function Education() {
 
 function Training(){
     const details = data.training.map((detail, index)=>
-        <li key={index}>{detail.name} <span>{detail.date}</span></li>
+        <p key={index}>{detail.name} <span>{detail.date}</span></p>
         )
     return (
         <div className="about-section">
-            <ul>{details}</ul>
+            <h2>Trainings/Certificates</h2>
+            {details}
         </div>
     )
 }
 
 function About(){
     return (
-        <div className="about">
+        <section className="about">
             <div>
                 <img src="" alt="" />
-                <p>{data.background.firstParagraph} <span>{data.background.secondParagraph}</span></p>
+                <p>{data.background.firstParagraph}</p>
+                <p>{data.background.secondParagraph}</p>
             </div>
             <div>
                 <Experience/>
                 <Education/>
                 <Training/>
             </div>
-        </div>
+        </section>
     )
 }
 

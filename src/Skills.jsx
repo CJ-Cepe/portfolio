@@ -1,4 +1,5 @@
 import {Skills as data} from './info.json'
+import './styles/Skills.css'
 
 function Section({group}){
     const key = group == 'technical' ? 'technical' :
@@ -18,16 +19,16 @@ function Section({group}){
 
 function Skills(){
     return (
-        <div className="skills">
+        <section className="skills">
             <div>
-            <Section group="technical"/>
-            <Section group="design"/>
-            <Section group="communication"/>
+                <Section group="technical"/>
+                <Section group="design"/>
+                <Section group="communication"/>
             </div>
             <div>
-            <Section group="others"/>
+                <Section group="others"/>
             </div>
-        </div>
+        </section>
     )
 }
 
