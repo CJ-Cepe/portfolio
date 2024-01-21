@@ -1,14 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --font1: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font1: 'Hanken Grotesk', 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  --white1: #FFFFFF;
+  --white2: #EDEDED;
+  --white3: #EDEDED;
+
+  --black1: #000000;
+  --black2: #1B1B1B;
+  --black3: #232323;
+
+  --gray1: #D2D2D2;
+  --gray2: #A5A5A5;
+  --gray3: #5A5A5A;
+
   --yellow1: #FCFD96;
   --yellow2: #FCFD96;
   --orange1: #FF8652;
-  --purple1: #9723C9;
-  --black1: #000000;
-  --gray1: #313131;
-  --white1: #fff;
-  --white2: #FFFAEA;
-  --white3: #e3dfd3;
+  --purple1: #6216FF;
+}
+
+* {
+ /*  outline: 1px red solid;   */
 }
