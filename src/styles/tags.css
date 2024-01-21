@@ -1,0 +1,95 @@
+.tag[data-value="html" i] {
+    background-color: #f67e5f;
+}
+
+.tag[data-value="css" i] {
+    background-color: #264DE4;
+}
+
+.tag[data-value="markdown" i] {
+    background-color: #FFFF00;
+}
+
+.tag[data-value="javascript" i] {
+    background-color: #F0DB4F;
+}
+
+.tag[data-value="json" i] {
+    background-color: yellow;
+}
+
+.tag[data-value="React" i] {
+    background-color: #61DBFB;
+}
+
+.tag[data-value="Git & GitHub" i] {
+    background-color: #F1502F;
+}
+
+.tag[data-value="webpack" i] {
+    background-color: yellow;
+}
+
+.tag[data-value="vite" i] {
+    background-color: rgb(184, 3, 184);
+    color: yellow;
+    
+}
+
+.tag[data-value="eslint & prettier" i] {
+    background-color: yellow;
+}
+
+.tag[data-value="jest" i] {
+    background-color: yellow;
+}
+
+.tag[data-value="npm" i] {
+    background-color: yellow;
+}
+
+.tag[data-value="vscode" i] {
+    background-color: yellow;
+}
+
+.tag[data-value="vite" i] {
+    background-color: yellow;
+}
+
+.tag[data-value="xubuntu" i] {
+    background-color: yellow;
+}
+
+.tag[data-value="windows" i] {
+    background-color: yellow;
+}
+
+/*================ Design ================*/
+.tag[data-value="figma" i] {
+    background-color: yellow;
+}
+
+.tag[data-value="illustrator" i] {
+    background-color: yellow;
+}
+
+.tag[data-value="notion" i] {
+    background-color: yellow;
+}
+
+.tag[data-value="ms office suite" i] {
+    background-color: yellow;
+}
+
+.tag[data-value="google docs" i] {
+    background-color: yellow;
+}
+
+/*================ Communication ================*/
+.tag[data-value="filipino" i] {
+    background-color: yellow;
+}
+
+.tag[data-value="english" i] {
+    background-color: yellow;
+}
