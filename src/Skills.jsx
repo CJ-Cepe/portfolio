@@ -1,5 +1,6 @@
 import {Skills as data} from './info.json'
 import './styles/Skills.css'
+import './styles/tags.css'
 
 function Section({group}){
     const key = group == 'technical' ? 'technical' :
@@ -7,12 +8,15 @@ function Section({group}){
         group == 'communication' ? 'communication' : 'others'
 
     const {[key]: value} = data
-    const content = value.join(" | ")
+    console.log(data)
+    const tags = value.map((tag, index) => {
+        return <li key={index} data-value = {tag} className='tag'>{tag}</li>
+    })
 
     return (
         <div className="skills-section">
             <h2>{key}</h2>
-            <p>{content}</p>
+            <ul>{tags}</ul>
         </div>
     )
 }
