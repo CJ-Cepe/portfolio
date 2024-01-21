@@ -5,6 +5,7 @@ import About from './About'
 import Skills from './Skills'
 import Contact from './Contact'
 import Projects from './Projects'
+import Marquee from './Marquee'
 import './styles/App.css'
 
 function App() {
@@ -16,10 +17,13 @@ function App() {
     </header>
     <main>
       <Hero/>
-      <About/>
-      <Skills/>
-      <Projects/>
-      <Contact/>
+      <div>
+        <Marquee/>
+        <About/>
+        <Skills/>
+        <Projects/>
+        <Contact/>
+      </div>
     </main>
     <footer>
     Copyright©2024, CJ-CEPE
