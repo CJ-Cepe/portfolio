@@ -23,11 +23,12 @@ function App() {
         <Skills/>
         <Projects/>
         <Contact/>
+        <footer>
+          Copyright©2024, CJ-Cepe
+        </footer>
       </div>
     </main>
-    <footer>
-    Copyright©2024, CJ-CEPE
-    </footer>
+    
     </>
   )
 }
