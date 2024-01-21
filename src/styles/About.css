@@ -1,25 +1,23 @@
-* {
-    /* outline: 1px red solid; */
-}
-
 .about {
+    width: 95vw;
+    gap: 2px;
+
     display: flex;
 }
 
 .about > div {
-    border: solid 2px var(--black1);
+    background-color: var(--white2);
+    border-radius: 20px;
 }
 
 .about > div:first-child {
-    background-color: var(--white1);
-    border-radius: 20px;
     flex: 1;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .about > div:first-child > img {
@@ -27,48 +25,59 @@
     height: 200px;
     background-color: var(--gray1);
 }
-.about > div:first-child > p {
-    line-height: 1.5;
-    text-indent: 1rem;
-    letter-spacing: 1px;
-    max-width: 70%;
+
+.about > div:first-child > p {  
+    width: 80%;
+    text-align: justify;
+    text-justify: inter-character;
+    text-indent: 1.5rem;
 }
 
 .about > div:last-child {
-    background-color: var(--white1);
-    border-radius: 20px;
     flex: 2;
+    font-size: 1.2rem;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 5%;
-    gap: 1rem;
-    line-height: 2;
+    padding: 4% 3%;
+    gap: 1.5rem;
+    line-height: 1.8;
 }
 
 .about-section > h2 {
+    font-size: 1.5rem;
     color: var(--purple1);
-    font-weight: 400;
+    font-weight: 300;
+    text-transform: uppercase;
 }
 
 .about-section:is(:first-child, :nth-child(2)) > p:nth-child(2){
+    font-size: 1.3rem;
+    margin-left: 5%;
     font-weight: bold;
+    line-height: 0.5;
+
     display: flex;
     justify-content: space-between;
-    margin-left: 5%;
 }
 
 .about-section > p:nth-child(3),
 .about-section:last-child p  {
+    margin-left: 5%;
     font-style: italic;
+
     display: flex;
     justify-content: space-between;
-    margin-left: 5%;
+}
+
+.about-section > p:nth-child(3) > span, 
+.about-section:last-child p > span {
+    color: var(--gray3);
 }
 
 .about-section ul {
     margin-left: 7%;
-    font-size: 0.8rem;
-    color: var(--gray1);
+    font-size: 1rem;
+    color: var(--gray3);
 }
