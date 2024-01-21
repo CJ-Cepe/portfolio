@@ -6,13 +6,10 @@
 
 #root {
     font-family: var(--font1);
-    background-color: var(--black1);
-}
-
-main {
-    /* background-color: var(--white1);
-    background-image: radial-gradient(var(--white2) 2px, var(--white1) 1px);
-    background-size: 50px 50px; */
+    font-weight: 400;
+    background-color: var(--white2);
+    background-image: radial-gradient(var(--gray1) 2px, var(--white2) 1px);
+    background-size: 50px 50px;
 }
 
 
