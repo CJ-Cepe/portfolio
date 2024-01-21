@@ -1,12 +1,23 @@
+
+*{
+   /*  outline: red 1px solid; */
+}
+
 .projects {
-    background-color: var(--white1);
+    width: 95vw;
+    background-color: var(--white2);
     border-radius: 20px;
-    border: 1px solid black;
 
     padding: 5rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 5rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .projects > .card > div {
@@ -42,6 +53,8 @@
 .projects > .card > p {
     font-weight: bold;
     font-size: 1.5rem;
+    padding: 0 1rem;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,18 +63,15 @@
 .projects > .card > p > span {
     font-weight: 400;
     font-size: 1rem;
-    color: var(--gray1);
+    color: var(--gray3);
 }
 
 .projects > .card > ul {
-    display: flex;
+    padding: 0 1rem;
     list-style-type: none;
+
+    display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem
 }
 
-.tag {
-    font-size: 0.9rem;
-    border-radius: 5px;
-    padding: 0.2rem 0.5rem;
-    background-color: antiquewhite;
-}
