@@ -1,31 +1,28 @@
-* {
-    /* outline: 1px red solid; */
-}
-
 header {
-    height: 11vh;
-    background-color: var(--white1);
-    border: black solid 2px;
-    font-size: 2rem;
-    border-radius: 20px;
+    min-height: 10vh;
+    font-size: 1.2rem;
 }
 
 header > nav {
-    height: 100%;
-
     display: flex;
     justify-content: space-between;
+    padding: 0 2rem;
 }
 
 /* website logo */
 nav > div {
+    width: 5rem;
     font-weight: bolder;
-    width: 200px;
-    border-right: black solid 3px;
+    background-color: var(--black1);
+    color: var(--white2);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 /* list */
@@ -33,7 +30,7 @@ nav > ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    margin-right: auto;
+    margin-right: auto; 
     
     display: flex;
     align-items: center;
@@ -41,7 +38,7 @@ nav > ul {
 
 nav > ul a {
     text-decoration: none;
-    color: var(--gray1);
+    color: var(--black1);
 }
 
 nav > ul > li {
@@ -50,14 +47,16 @@ nav > ul > li {
 
 /* nav button */
 nav > button {
-    width: 100px;
     border: none;
-    border-left: black solid 3px;
     background-color: transparent;
 }
 
 nav > button > img {
-    height: 70%;
-    width: auto;
-    object-fit: contain;
+    height: 60%;
+    object-fit: cover;
 }
+
+@media (min-width: 600px){
+
+}
+    
