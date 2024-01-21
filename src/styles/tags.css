@@ -1,3 +1,9 @@
+.tag {
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 0.2rem 0.5rem;
+}
+
 .tag[data-value="html" i] {
     background-color: #f67e5f;
 }
@@ -10,7 +16,8 @@
     background-color: #FFFF00;
 }
 
-.tag[data-value="javascript" i] {
+.tag[data-value="javascript"i], 
+.tag[data-value="js"i]{
     background-color: #F0DB4F;
 }
 

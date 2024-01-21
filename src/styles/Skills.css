@@ -5,6 +5,7 @@
     overflow-x: scroll;
     gap: 2px;
 
+    border-radius: 20px;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
