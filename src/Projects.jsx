@@ -3,7 +3,7 @@ import './styles/Project.css'
 
 function Card({name, date, link, tools}){
     const imgSrc = new URL(link, import.meta.url).href 
-    const toolList = tools.map((tool, index) => <li key={index} className='tag'>{tool}</li>)
+    const toolList = tools.map((tool, index) => <li key={index} className='tag'data-value={tool}>{tool}</li>)
 
     return (
         <div className="card">
