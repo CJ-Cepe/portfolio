@@ -1,26 +1,83 @@
 .contact {
-    background-color: var(--white1);
+    width: 95vw;
+    min-height: 60vh;
     border-radius: 20px;
-    border: 2px solid var(--black1);
+    font-size: 2rem;
+
+    display: flex;
+    gap: 2px;
+}
+
+.contact > div {
+    background-color: var(--white2);
+    border-radius: 20px;
+}
+
+.contact > div:first-child{
+    flex: 1;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 50vh;
-    font-size: 2rem;
+
+    text-align: center;
 }
 
-.contact > :is(h2, h3) {
+.contact > div:last-child{
+    flex: 0.5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact > div:last-child > img{
+    width: 50%;
+}
+
+.contact > div:last-child > img:hover{
+    animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: no-preference){
+    .contact > div:last-child > img{
+        animation: rotate 10s linear infinite;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.contact > div:first-child :is(h2, h3) {
     text-transform: uppercase;
 }
 
-.contact > ul {
+.contact > div:first-child > ul {
     list-style-type: none;
 }
 
-.contact a {
+.contact > div:first-child li {
+
+}
+
+.contact > div:first-child a {
     text-decoration: none;
-    color: var(--gray1)
+    color: var(--gray3)
+}
+
+.contact > div:first-child > h2 {
+    letter-spacing: 1rem;
+}
+
+.contact > div:first-child > h3 {
+    letter-spacing: 0.2rem;
 }
 
