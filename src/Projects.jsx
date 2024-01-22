@@ -8,7 +8,10 @@ function Card({name, date, link, tools}){
     return (
         <div className="card">
             <div>
-                <img src={imgSrc} alt="" />
+                <div>
+                    <img src={imgSrc} alt="" />
+                </div>
+                <div></div>
             </div>
             <p>{name}<span>{date}</span></p>
             <ul>{toolList}</ul>
