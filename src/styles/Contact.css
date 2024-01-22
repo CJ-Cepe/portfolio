@@ -1,12 +1,8 @@
-* {
-   /*  outline: 1px solid red; */
-}
-
 .contact {
     width: 95vw;
     min-height: 60vh;
     border-radius: 20px;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 3cqw, 2rem);
 
     display: flex;
     gap: 2px;
@@ -15,6 +11,7 @@
 .contact > div {
     background-color: var(--white2);
     border-radius: 20px;
+    padding: 2rem 0;
 }
 
 /* ---------- Right Content ---------- */
@@ -28,6 +25,7 @@
 
 .contact > div:last-child > img{
     width: 50%;
+    width: clamp(200px, 50%, 500px);
 }
 
 .contact > div:last-child > img:hover{
@@ -67,14 +65,16 @@
 
 .contact > div:first-child > p:first-child {
     font-size: 3rem;
+    font-size: clamp(2.3rem, 4cqw, 3rem);
     font-weight: 800;
     letter-spacing: 15px;
     padding-left: 10px;
-    margin-bottom: -1rem;
+    margin-bottom: 0.2rem;
 }
 
 .contact > div:first-child > p:nth-child(2) {
     font-size: 2.3rem;
+    font-size: clamp(1.8rem, 3.6cqw, 2.3rem);
     font-weight: 400;
     letter-spacing: 3px;
     margin-bottom: 1rem;
@@ -135,4 +135,12 @@
 
 .contact > div:first-child > a:nth-child(6)::before {
     background-image: url('../assets/linkedin.svg');
+}
+
+@media(max-width: 800px){
+    .contact {  
+        display: flex;
+        flex-direction: column;
+    }
+    
 }
