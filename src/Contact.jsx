@@ -4,14 +4,12 @@ function Contact(){
     return (
         <section className='contact'>
             <div>
-                <h2>Philippines</h2>
-                <h3>Antipolo City, 1870</h3>
-                <ul>
-                    <li><a>+639205090839</a></li>
-                    <li><a href="">cj.ceps@gmail.com</a></li>
-                    <li><a href="">github.com/CJ-Cepe</a></li>
-                    <li><a href="">linkedin.com/in/cjcepe</a></li>
-                </ul>
+                <p>Philippines</p>
+                <p>Antipolo City, 1870</p>
+                <a>+639205090839</a>
+                <a href='#'>cj.ceps@gmail.com</a>
+                <a href='#'>github.com/CJ-Cepe</a>
+                <a href='#'>linkedin.com/in/cjcepe</a>
             </div>
             <div>
                 <img src={circularText} alt="Open For Work" />
