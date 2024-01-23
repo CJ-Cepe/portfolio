@@ -12,9 +12,11 @@ function Marquee(){
                 <li>Open for Job Opportunities! 📣</li>
                 <li>Open for Job Opportunities! 📣</li>
                 <li>Open for Job Opportunities! 📣</li>
+                <li>Open for Job Opportunities! 📣</li>
             </ul>
 
             <ul className="marquee-content" aria-hidden="true">
+                <li>Open for Job Opportunities! 📣</li>
                 <li>Open for Job Opportunities! 📣</li>
                 <li>Open for Job Opportunities! 📣</li>
                 <li>Open for Job Opportunities! 📣</li>
