@@ -33,3 +33,19 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
+/* ----- main scroll bar ----- */
+::-webkit-scrollbar{
+    background: var(--black1);
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--purple1);
+}
+
+html {
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+    scrollbar-color: var(--purple1) var(--white2);
+}
