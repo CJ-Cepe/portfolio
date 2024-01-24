@@ -1,17 +1,11 @@
 .skills {
     width: 95vw;
+    border-radius: 20px;
 
     display: flex;
-    overflow-x: scroll;
+    overflow-x: auto;
     gap: 2px;
-
-    /* border-radius: 20px; */
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.skills::-webkit-scrollbar{
-    display: none;
+    /* scroll-snap-type: x mandatory; */
 }
 
 .skills > div {
@@ -19,10 +13,16 @@
     border-radius: 20px;
     min-width: 80%;
     padding: 1rem;
+
     flex: 1;
 }
 
+.skills > div:nth-child(2){
+   /*  scroll-snap-align: center; */
+}
+
 .skills > div:first-child {
+   /*  scroll-snap-align: center; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 0.7fr 0.5fr;
@@ -65,7 +65,39 @@
     gap: 0.5rem;
 }
 
+
+/*------ Horizontal Scroll bar ------ */
+/* Chrome, Edge, and Safari ? */
+.skills::-webkit-scrollbar{
+    -webkit-appearance: none;
+   background: transparent;
+   border-radius: 20px;
+   height: 0px;
+}
+
+.skills:hover::-webkit-scrollbar{
+    height: 15px;
+ }
+ 
+.skills::-webkit-scrollbar-thumb{
+    background: var(--purple1);
+    border-top: 3.5px solid var(--black1);
+    border-bottom: 2px solid var(--black1);
+    border-radius: 10px;
+}
+
+/* Firefox ? */
+.skills {
+    scrollbar-width: thin;
+    scrollbar-color: var(--purple1) transparent;
+}
+
+/*------ media queries ------ */
 @media (max-width: 800px) {
+    .skills {
+        border-radius: 0;
+    }
+
     .skills > div {
         min-width: 90%;
     }
@@ -103,3 +135,4 @@
         flex-direction: column;
     }
 }
+
