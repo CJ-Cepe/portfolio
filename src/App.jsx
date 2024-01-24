@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Nav from './Nav'
 import Hero from './Hero'
 import About from './About'
@@ -9,7 +8,6 @@ import Marquee from './Marquee'
 import './styles/App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
   return (
     <>
     <header>
