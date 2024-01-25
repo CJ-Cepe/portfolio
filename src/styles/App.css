@@ -36,7 +36,7 @@ footer {
 
 /* ----- main scroll bar ----- */
 ::-webkit-scrollbar{
-    background: var(--black1);
+    background: var(--white2);
     width: 10px;
 }
 
@@ -45,7 +45,7 @@ footer {
 }
 
 html {
-    scrollbar-gutter: stable;
+    /* scrollbar-gutter: stable; */
     scrollbar-width: thin;
     scrollbar-color: var(--purple1) var(--white2);
 }
