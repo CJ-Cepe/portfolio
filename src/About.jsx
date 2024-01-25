@@ -45,7 +45,7 @@ function Training(){
 
 function About(){
     return (
-        <section className="about">
+        <section id="about-section" className="about">
             <div>
                 <img src="" alt="" />
                 <p>{data.background.firstParagraph}</p>

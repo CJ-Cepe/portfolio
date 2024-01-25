@@ -2,7 +2,7 @@ import './styles/Contact.css'
 import circularText from './assets/circular-text.svg'
 function Contact(){
     return (
-        <section className='contact'>
+        <section id="contact-section" className='contact'>
             <div>
                 <p>Philippines</p>
                 <p>Antipolo City, 1870</p>

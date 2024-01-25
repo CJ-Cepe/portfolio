@@ -25,7 +25,7 @@ function Projects(){
     })
 
     return (
-        <section className="projects">
+        <section id="projects-section" className="projects">
             {cards}
         </section>
     )

@@ -23,7 +23,7 @@ function Section({group}){
 
 function Skills(){
     return (
-        <section className="skills">
+        <section id="skills-section" className="skills">
             <div>
                 <Section group="technical"/>
                 <Section group="design"/>
