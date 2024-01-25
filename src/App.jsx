@@ -10,9 +10,7 @@ import './styles/App.css'
 function App() {
   return (
     <>
-    <header>
-      <Nav/>
-    </header>
+    <Nav/>
     <main>
       <Hero/>
       <div>
