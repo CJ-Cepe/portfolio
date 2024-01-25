@@ -17,19 +17,47 @@ function Nav(){
         ulRef.current.classList.toggle('styled-list', !entries[0].isIntersecting)
     }, {rootMargin: "20px 0px 0px 0px"})
 
+    const objRef = useRef({
+        "about-section": false, 
+        "skills-section": false, 
+        "projects-section": false, 
+        "contact-section": false
+    })
+    
+    let currentSection;
+    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-          const id = entry.target.getAttribute('id')
-          ulRef.current.querySelector(`[href="#${id}"]`).parentNode.classList.toggle('active', entry.isIntersecting);
-          /* if (entry.isIntersecting) {
-                ulRef.current.querySelector(`[href="#${id}"]`).classList.add('active');
+            console.log(entry.target.id, entry.isIntersecting)
+            if(entry.isIntersecting){
+                objRef[entry.target.id] = true
+                currentSection = entry
+                const activeList = ulRef.current.querySelectorAll('.active');
+                activeList.forEach((list)=>{
+                    list.classList.remove('active')
+                })
+                
+                ulRef.current.querySelector(`[href="#${currentSection.target.id}"]`).parentNode.classList.toggle('active', entry.isIntersecting);
             } else {
-                ulRef.current.querySelector(`[href="#${id}"]`).classList.remove('active');
-            } */
-        });
-    }, { threshold: 0.1 });
+                objRef[entry.target.id] = false
+                if(currentSection){
+                    if(entry.target.id === currentSection.target.id){
+                        console.log(entry.target.id, currentSection.target.id)
+                        ulRef.current.querySelector(`[href="#${entry.target.id}"]`).parentNode.classList.toggle('active', entry.isIntersecting);
 
-    
+                        //if there is still true in objRef, set that as active
+                        let trueKey = Object.keys(objRef).find(key => objRef[key] === true);
+                        if(trueKey){
+                            console.log(trueKey, "wth")
+                            ulRef.current.querySelector(`[href="#${trueKey}"]`).parentNode.classList.add('active');
+                        }
+                    }
+                }
+            }
+        })
+    }, { threshold: 0.2 });
+
     useEffect(()=> {
         //give navObserver observe
         if(scrollWatcher.current){
@@ -50,9 +78,6 @@ function Nav(){
         }
     }, [])
 
-
-  
-   
     return (
         <>
         <div ref={scrollWatcher} aria-hidden="true"></div>
