@@ -112,12 +112,12 @@ nav > button > img {
 }
 
 /* --------------- media queries ---------------*/
-* {
-    outline: red 1px solid;
-}
-
 /*600*/
 @media (max-width: 689px){
+    .sticky{
+        top: -7%;
+    }
+
     nav {
         font-size: 1rem;
         grid-template-columns: 0.1fr 1.5fr 0.1fr;
