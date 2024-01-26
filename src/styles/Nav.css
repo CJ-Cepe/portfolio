@@ -59,7 +59,7 @@ nav > div {
 }
 
 nav > ul a:hover{
-    color: var(--purple1);
+    color: var(--black1);
 }
 
 /* --------------- list ---------------*/
@@ -91,6 +91,7 @@ nav a {
 nav > ul > li {
    border-radius: 20px;
    padding: 3px 10px;
+   transition: background-color 0.2s ease-out;
 }
 
 /* --------------- light mode button ---------------*/

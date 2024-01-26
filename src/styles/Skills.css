@@ -3,7 +3,7 @@
     border-radius: 20px;
 
     display: flex;
-    overflow-x: auto;
+    overflow-x: scroll;
     gap: 2px;
     /* scroll-snap-type: x mandatory; */
 }
