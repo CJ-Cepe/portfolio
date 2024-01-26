@@ -1,9 +1,9 @@
-html{
+html {
     scroll-behavior: smooth;
     scroll-padding: 2rem;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,14 +12,14 @@ html{
 #root {
     font-family: var(--font1);
     font-weight: 400;
-    background-color: var(--white2);
-    background-image: radial-gradient(var(--gray1) 2px, var(--white2) 1px);
+    background-color: var(--bg-primary);
+    background-image: radial-gradient(var(--bg-darker) 2px, var(--bg-primary) 1px);
     background-size: 50px 50px;
 }
 
 main > div {
     overflow: hidden;
-    background-color: var(--black1);
+    background-color: var(--bg-secondary);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,11 +31,12 @@ main > div {
 } */
 
 footer {
+    color: var(--font-primary);
     width: 95vw;
     min-height: 8vh;
     font-size: 1rem;
-    border-radius: 20px;
-    background-color: var(--white2);
+    border-radius: 20px 20px 0 0;
+    background-color: var(--bg-primary);
     letter-spacing: 0.3rem;
 
     display: flex;
@@ -44,8 +45,9 @@ footer {
 }
 
 /* ----- main scroll bar ----- */
+/* outside of root scope */
 ::-webkit-scrollbar{
-    background: var(--white2);
+    background: var(--black2);
     width: 10px;
 }
 
@@ -56,5 +58,5 @@ footer {
 html {
     /* scrollbar-gutter: stable; */
     scrollbar-width: thin;
-    scrollbar-color: var(--purple1) var(--white2);
+    scrollbar-color: var(--accent1) var(--bg-primary);
 }

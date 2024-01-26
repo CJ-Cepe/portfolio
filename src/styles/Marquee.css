@@ -1,6 +1,6 @@
 .marquee {
     min-height: 2rem;
-    color: var(--white2);
+    color: var(--font-tertiary);
     overflow: hidden;
     user-select: none;
 

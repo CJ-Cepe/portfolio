@@ -1,6 +1,7 @@
 .skills {
     width: 95vw;
     border-radius: 20px;
+    color: var(--font-primary);
 
     display: flex;
     overflow-x: scroll;
@@ -9,7 +10,7 @@
 }
 
 .skills > div {
-    background-color: var(--white2);
+    background-color: var(--bg-primary);
     border-radius: 20px;
     min-width: 80%;
     padding: 1rem;
@@ -80,16 +81,16 @@
  }
  
 .skills::-webkit-scrollbar-thumb{
-    background: var(--purple1);
-    border-top: 3.5px solid var(--black1);
-    border-bottom: 2px solid var(--black1);
+    background: var(--accent1);
+    border-top: 3.5px solid var(--bg-secondary);
+    border-bottom: 2px solid var(--bg-secondary);
     border-radius: 10px;
 }
 
 /* Firefox ? */
 .skills {
     scrollbar-width: thin;
-    scrollbar-color: var(--purple1) transparent;
+    scrollbar-color: var(--accent1) transparent;
 }
 
 /*------ media queries ------ */

@@ -10,7 +10,7 @@
 }
 
 .hero > h1 {
-    color: var(--gray3);
+    color: var(--font-secondary);
     font-size: 2rem;
     font-weight: 400;
 }
@@ -20,7 +20,7 @@
 } 
 
 .hero > h1 > em{
-    color: var(--black1);
+    color: var(--font-primary);
     display: block;
     font-size: 5rem;
     font-style: normal;
@@ -38,16 +38,16 @@
     font-size: 1.2rem;
     max-width: 50ch;
     margin-top: 2rem;
-    color: var(--purple1);
+    color: var(--accent1);
 }
 
 .hero > button {
     font-size: 1rem;
     padding: 1rem 2rem;
     margin-top: 2rem;
-    background-color: var(--orange1);
+    background-color: var(--accent2);
     border-radius: 10px;
-    border: 2px solid black;
+    border: 2px solid var(--bg-secondary);
 }
 
 @media(max-width: 600px){

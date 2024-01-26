@@ -1,5 +1,5 @@
 nav {
-    color: var(--black1);
+    color: var(--font-primary);
     font-size: 1.2rem;
     /* min-height: 11vh; */
     min-height: 90px;
@@ -16,8 +16,8 @@ nav {
 nav > div { 
     grid-column: 1 / 2;
     width: 85px;
-    background-color: var(--black1);
-    color: var(--white2);
+    background-color: var(--bg-secondary);
+    color: var(--font-tertiary);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     font-weight: 400;
@@ -40,8 +40,8 @@ nav > div {
 }
 
 .styled-list {
-    background-color: var(--white2);
-    border: 2px solid var(--black1);
+    background-color: var(--bg-primary);
+    border: 2px solid var(--bg-secondary);
     /* padding:0 1rem; */
 }
 
@@ -51,15 +51,19 @@ nav > div {
 }
 
 .active {
-    background-color: var(--purple1);
+    background-color: var(--accent1);
 }
 
 .active > a {
-    color: var(--white2);
+    color: var(--font-tertiary);
+}
+
+.active > a:hover {
+    color: var(--font-primary);
 }
 
 nav > ul a:hover{
-    color: var(--black1);
+    color: var(--accent1);
 }
 
 /* --------------- list ---------------*/
@@ -85,7 +89,7 @@ nav > ul {
 
 nav a {
     text-decoration: none;
-    color: var(--black1);
+    color: var(--font-primary);
 }
 
 nav > ul > li {

@@ -21,6 +21,32 @@
   --purple1: #6216FF;
 }
 
+#root[data-theme="dark"]{
+  --bg-primary: var(--black2);
+  --bg-secondary: var(--white2);
+  --bg-darker: var(--black1);
+  --font-primary: var(--white2);
+  --font-secondary: var(--gray2);
+  --font-tertiary: var(--black1);
+  --accent1: var(--purple1);
+  --accent2: var(--orange1);
+}
+
+#root[data-theme="light"]{
+  --bg-primary: var(--white2);
+  --bg-secondary: var(--black1);
+  --bg-darker: var(--gray1);
+  --font-primary: var(--black2);
+  --font-secondary: var(--gray3);
+  --font-tertiary: var(--white1);
+  --accent1: var(--purple1);
+  --accent2: var(--orange1);
+}
+
+#root * {
+  transition: color 0.2s ease-in;
+}
+
 * {
  /*  outline: 1px red solid;   */
 }

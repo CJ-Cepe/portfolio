@@ -5,12 +5,12 @@
 .about {
     width: 95vw;
     gap: 2px;
-
+    color: var(--font-primary);
     display: flex;
 }
 
 .about > div {
-    background-color: var(--white2);
+    background-color: var(--bg-primary);
     border-radius: 20px;
 }
 
@@ -55,7 +55,7 @@
 .about-section > h2 {
     font-size: 1.5rem;
     font-size: clamp(1rem, 2cqw, 1.5rem);
-    color: var(--purple1);
+    color: var(--accent1);
     font-weight: 300;
     text-transform: uppercase;
 }
@@ -96,7 +96,7 @@
 /*date*/
 .about-section > p:nth-child(3) > span, 
 .about-section:last-child p > span {
-    color: var(--gray3);
+    color: var(--font-secondary);
 
     flex-shrink: 0;
     min-width: 100px;
@@ -107,7 +107,7 @@
     margin-left: 7%;
     font-size: 1rem;
     font-size: clamp(0.8rem, 2cqw, 1rem);
-    color: var(--gray3);
+    color: var(--font-secondary);
 }
 
 @media (max-width: 800px) {   
