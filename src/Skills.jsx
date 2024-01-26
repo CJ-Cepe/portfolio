@@ -8,7 +8,6 @@ function Section({group}){
         group == 'communication' ? 'communication' : 'others'
 
     const {[key]: value} = data
-    console.log(data)
     const tags = value.map((tag, index) => {
         return <li key={index} data-value={tag} className='tag'>{tag}</li>
     })
