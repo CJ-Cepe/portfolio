@@ -23,46 +23,28 @@ function Nav(){
         "projects-section": [false, 0], 
         "contact-section": [false, 0]
     })
-    
-    
+
+    // Helper function to get the key with the highest ratio
+    const getMaxRatioKey = (obj) => {
+        return Object.keys(obj).reduce((maxKey, key) => 
+            obj[key][0] && obj[key][1] > (maxKey ? obj[maxKey][1] : -Infinity) ? key : maxKey, null);
+    };
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            const {target: {id}, isIntersecting, intersectionRatio} = entry
-            console.log(id, isIntersecting, intersectionRatio)
-            objRef.current[id][0] = isIntersecting
-            objRef.current[id][1] = intersectionRatio
-            /* maxRatio = maxId === id ? intersectionRatio : maxRatio */
-            
-            let maxId = null;
-            let maxRatio = -Infinity;
-
-            for(let key in objRef.current){
-                if(objRef.current[key][0]){
-                    console.log(maxId, maxRatio)
-                    console.log(key, 'true', objRef.current[key][1])
-                    if(objRef.current[key][1] > maxRatio){
-                        maxRatio = objRef.current[key][1]
-                        maxId = key
-                    }/*  else {
-                        console.log(key)
-                        ulRef.current.querySelector(`[href="#${key}"]`).parentNode.classList.toggle('active', false)
-                    } */
-                } else {
-                    ulRef.current.querySelector(`[href="#${key}"]`).parentNode.classList.toggle('active', objRef.current[key][0])
-                }
-            }
-
-            ulRef.current.querySelectorAll('.active').forEach((list)=>{
-                list.classList.remove('active')
-            })
+            const {target: {id}, isIntersecting, intersectionRatio} = entry;
+            objRef.current[id] = [isIntersecting, intersectionRatio];
+    
+            const maxId = getMaxRatioKey(objRef.current);
+    
+            // Remove 'active' class from all elements
+            ulRef.current.querySelectorAll('.active').forEach((list) => list.classList.remove('active'));
+    
+            // Add 'active' class to the element with the highest ratio
             if(maxId){
-                ulRef.current.querySelector(`[href="#${maxId}"]`).parentNode.classList.toggle('active', objRef.current[maxId][0])
+                ulRef.current.querySelector(`[href="#${maxId}"]`).parentNode.classList.add('active');
             }
-            //if maxId is null remove active to all
-            console.log(maxId, maxRatio)
-           console.log("------------------")
-        })
+        });
     }, {threshold: [0.10, 0.50, 1]});
 
     useEffect(()=> {
