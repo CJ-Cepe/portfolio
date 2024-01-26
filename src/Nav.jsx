@@ -1,12 +1,14 @@
 import './styles/Nav.css'
-import sun from '../public/sun.svg'
-import { useRef, useEffect } from 'react'
+import sun from './assets/sun.svg'
+import moon from './assets/moon.svg'
+import { useRef, useEffect, useState } from 'react'
 
 function Nav(){
+    const [icon, setIcon] = useState(sun)
     const scrollWatcher = useRef(null)
     const navRef = useRef(null)
     const titleRef = useRef(null)
-/*     const buttonRef = useRef(null) */
+    const buttonRef = useRef(null)
     const ulRef = useRef(null)
     
     const navObserver = new IntersectionObserver((entries) => {
@@ -68,14 +70,17 @@ function Nav(){
     }, [])
 
 
-    const buttonRef = useRef(null)
-    //change icon
-    //toggle theme
-
     const setTheme = (e) => {
         const root =  document.querySelector('#root')
         const currentTheme = root.getAttribute('data-theme')
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light'
+        let newTheme = null
+        if(currentTheme === 'light'){
+            newTheme = 'dark';
+            setIcon(moon)
+        } else {
+            newTheme = 'light';
+            setIcon(sun)
+        }
         root.setAttribute('data-theme', newTheme)
     }
 
@@ -90,7 +95,7 @@ function Nav(){
                 <li><a href="#projects-section">Projects</a></li>
                 <li><a href="#contact-section">Contact</a></li>
             </ul>
-            <button ref={buttonRef} onClick={setTheme} ><img src={sun} alt="sun icon for lightmode" /></button>
+            <button ref={buttonRef} onClick={setTheme} ><img src={icon} data-icon={icon} alt="icon for thememode" /></button>
         </nav>
         </>
     )
