@@ -6,7 +6,7 @@ function Nav(){
     const scrollWatcher = useRef(null)
     const navRef = useRef(null)
     const titleRef = useRef(null)
-    const buttonRef = useRef(null)
+/*     const buttonRef = useRef(null) */
     const ulRef = useRef(null)
     
     const navObserver = new IntersectionObserver((entries) => {
@@ -67,6 +67,18 @@ function Nav(){
         }
     }, [])
 
+
+    const buttonRef = useRef(null)
+    //change icon
+    //toggle theme
+
+    const setTheme = (e) => {
+        const root =  document.querySelector('#root')
+        const currentTheme = root.getAttribute('data-theme')
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light'
+        root.setAttribute('data-theme', newTheme)
+    }
+
     return (
         <>
         <div ref={scrollWatcher} aria-hidden="true"></div>
@@ -78,10 +90,9 @@ function Nav(){
                 <li><a href="#projects-section">Projects</a></li>
                 <li><a href="#contact-section">Contact</a></li>
             </ul>
-            <button ref={buttonRef}><img src={sun} alt="sun icon for lightmode" /></button>
+            <button ref={buttonRef} onClick={setTheme} ><img src={sun} alt="sun icon for lightmode" /></button>
         </nav>
         </>
-        
     )
 }
 

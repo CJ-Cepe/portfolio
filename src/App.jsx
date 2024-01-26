@@ -8,6 +8,8 @@ import Marquee from './Marquee'
 import './styles/App.css'
 
 function App() {
+  document.querySelector('#root').setAttribute('data-theme', 'light');
+  
   return (
     <>
     <Nav/>
