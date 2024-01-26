@@ -10,7 +10,7 @@ function Nav(){
     const ulRef = useRef(null)
     
     const navObserver = new IntersectionObserver((entries) => {
-        console.log(entries[0].isIntersecting)
+        /* console.log(entries[0].isIntersecting) */
         navRef.current.classList.toggle('sticky', !entries[0].isIntersecting)
         titleRef.current.classList.toggle('hide', !entries[0].isIntersecting)
         buttonRef.current.classList.toggle('hide', !entries[0].isIntersecting)
@@ -18,45 +18,52 @@ function Nav(){
     }, {rootMargin: "20px 0px 0px 0px"})
 
     const objRef = useRef({
-        "about-section": false, 
-        "skills-section": false, 
-        "projects-section": false, 
-        "contact-section": false
+        "about-section": [false, 0], 
+        "skills-section": [false, 0], 
+        "projects-section": [false, 0], 
+        "contact-section": [false, 0]
     })
     
-    let currentSection;
     
-
+    
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            console.log(entry.target.id, entry.isIntersecting)
-            if(entry.isIntersecting){
-                objRef[entry.target.id] = true
-                currentSection = entry
-                const activeList = ulRef.current.querySelectorAll('.active');
-                activeList.forEach((list)=>{
-                    list.classList.remove('active')
-                })
-                
-                ulRef.current.querySelector(`[href="#${currentSection.target.id}"]`).parentNode.classList.toggle('active', entry.isIntersecting);
-            } else {
-                objRef[entry.target.id] = false
-                if(currentSection){
-                    if(entry.target.id === currentSection.target.id){
-                        console.log(entry.target.id, currentSection.target.id)
-                        ulRef.current.querySelector(`[href="#${entry.target.id}"]`).parentNode.classList.toggle('active', entry.isIntersecting);
+            const {target: {id}, isIntersecting, intersectionRatio} = entry
+            console.log(id, isIntersecting, intersectionRatio)
+            objRef.current[id][0] = isIntersecting
+            objRef.current[id][1] = intersectionRatio
+            /* maxRatio = maxId === id ? intersectionRatio : maxRatio */
+            
+            let maxId = null;
+            let maxRatio = -Infinity;
 
-                        //if there is still true in objRef, set that as active
-                        let trueKey = Object.keys(objRef).find(key => objRef[key] === true);
-                        if(trueKey){
-                            console.log(trueKey, "wth")
-                            ulRef.current.querySelector(`[href="#${trueKey}"]`).parentNode.classList.add('active');
-                        }
-                    }
+            for(let key in objRef.current){
+                if(objRef.current[key][0]){
+                    console.log(maxId, maxRatio)
+                    console.log(key, 'true', objRef.current[key][1])
+                    if(objRef.current[key][1] > maxRatio){
+                        maxRatio = objRef.current[key][1]
+                        maxId = key
+                    }/*  else {
+                        console.log(key)
+                        ulRef.current.querySelector(`[href="#${key}"]`).parentNode.classList.toggle('active', false)
+                    } */
+                } else {
+                    ulRef.current.querySelector(`[href="#${key}"]`).parentNode.classList.toggle('active', objRef.current[key][0])
                 }
             }
+
+            ulRef.current.querySelectorAll('.active').forEach((list)=>{
+                list.classList.remove('active')
+            })
+            if(maxId){
+                ulRef.current.querySelector(`[href="#${maxId}"]`).parentNode.classList.toggle('active', objRef.current[maxId][0])
+            }
+            //if maxId is null remove active to all
+            console.log(maxId, maxRatio)
+           console.log("------------------")
         })
-    }, { threshold: 0.2 });
+    }, {threshold: [0.10, 0.50, 1]});
 
     useEffect(()=> {
         //give navObserver observe
