@@ -60,3 +60,50 @@ html {
     scrollbar-width: thin;
     scrollbar-color: var(--accent1) var(--bg-primary);
 }
+
+
+/* animation sheet */
+
+/* main {
+    view-timeline-name: --main;
+    view-timeline-axis: y;   
+}
+
+html {
+    view-timeline-name: --html;
+    view-timeline-axis: y;   
+} */
+
+.hero {
+    position: relative;
+    z-index: 0;
+    animation: moveDown linear;
+    animation-timeline: view();
+    animation-range: cover 52%, exit 100%;
+}
+/* 
+#about-section{
+    position: relative;
+    animation: fadeIn linear;
+    animation-timeline: view(self);
+    animation-range: entry 0% entry 80%;
+} */
+
+main > div {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes moveDown {
+    0% {transform: translateY(0); }
+    100% {transform: translateY(70%); }
+}
+
+/* @keyframes fadeIn{
+    0% {
+        scale: 0.8;
+    }
+    100% {
+        scale: 1;
+    }
+} */
