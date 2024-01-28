@@ -44,7 +44,7 @@
 }
 
 #root * {
-  transition: color 0.2s ease-in;
+  /* transition: color 0.2s ease-in; */
 }
 
 * {

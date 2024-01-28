@@ -1,7 +1,7 @@
 .projects {
     width: 95vw;
     background-color: var(--bg-primary);
-    border-radius: 20px;
+    border-radius: 30px;
 
     padding: 5rem 5%;
     display: grid;

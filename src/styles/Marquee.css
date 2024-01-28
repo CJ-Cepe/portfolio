@@ -35,6 +35,6 @@
 
 @media (prefers-reduced-motion: no-preference) {
     .marquee-content{
-        animation: marquee 30s linear infinite;
+        animation: marquee 40s linear infinite;
     }
 }
