@@ -1,4 +1,4 @@
-.contact {
+#contact-section {
     width: 95vw;
     min-height: 60vh;
     border-radius: 20px;
@@ -9,14 +9,14 @@
     gap: 2px;
 }
 
-.contact > div {
+#contact-section > div {
     background-color: var(--bg-primary);
     border-radius: 30px;
     padding: 2rem 0;
 }
 
 /* ---------- Right Content ---------- */
-.contact > div:last-child{
+#contact-section > div:last-child{
     flex: 0.6;
 
     display: flex;
@@ -24,17 +24,17 @@
     align-items: center;
 }
 
-.contact > div:last-child > img{
+#contact-section > div:last-child > img{
    /*  max-width: 50%; */
     width: clamp(100px, 50%, 300px);
 }
 
-.contact > div:last-child > img:hover{
+#contact-section > div:last-child > img:hover{
     animation-play-state: paused;
 }
 
 @media (prefers-reduced-motion: no-preference){
-    .contact > div:last-child > img{
+    #contact-section > div:last-child > img{
         animation: rotate 10s linear infinite;
     }
 }
@@ -50,7 +50,7 @@
 }
 
 /* ---------- Left Content ---------- */
-.contact > div:first-child{
+#contact-section > div:first-child{
     flex: 1;
     
     text-align: center;
@@ -60,11 +60,11 @@
     align-items: center;
 }
 
-.contact > div:first-child p:is(:first-child, p:nth-child(2)) {
+#contact-section > div:first-child p:is(:first-child, p:nth-child(2)) {
     text-transform: uppercase;
 }
 
-.contact > div:first-child > p:first-child {
+#contact-section > div:first-child > p:first-child {
     font-size: 3rem;
     font-size: clamp(1.3rem, 4cqw, 3rem);
     font-weight: 800;
@@ -73,7 +73,7 @@
     margin-bottom: 0.2rem;
 }
 
-.contact > div:first-child > p:nth-child(2) {
+#contact-section > div:first-child > p:nth-child(2) {
     font-size: 2.3rem;
     font-size: clamp(1.35rem, 3.6cqw, 2.3rem);
     font-weight: 400;
@@ -81,30 +81,30 @@
     margin-bottom: 1rem;
 }
 
-.contact > div:first-child > a {
+#contact-section > div:first-child > a {
     line-height: 3rem;
     color: var(--font-secondary);
     text-decoration: none;
 }
 
-.contact > div:first-child > a:nth-child(3){
+#contact-section > div:first-child > a:nth-child(3){
     letter-spacing: clamp(5px, 0.8cqi, 12px);
 }
 
-.contact > div:first-child > a:nth-child(4){
+#contact-section > div:first-child > a:nth-child(4){
     letter-spacing: clamp(2.3px, 0.43cqi, 6.3px);
 }
 
-.contact > div:first-child > a:nth-child(5){
+#contact-section > div:first-child > a:nth-child(5){
     letter-spacing: clamp(1.1px, 0.32cqi, 5.1px);
 }
 
-.contact > div:first-child > a:nth-child(6){
+#contact-section > div:first-child > a:nth-child(6){
     letter-spacing: clamp(0.3px, 0.16cqi, 2.6px);
 }
 
-.contact > div:first-child a:is(:nth-child(3),:nth-child(5))::after,
-.contact > div:first-child a:is(:nth-child(4),:nth-child(6))::before {
+#contact-section > div:first-child a:is(:nth-child(3),:nth-child(5))::after,
+#contact-section > div:first-child a:is(:nth-child(4),:nth-child(6))::before {
     background-size: contain;
     background-repeat: no-repeat ;
     background-position: center;
@@ -114,48 +114,48 @@
     content:"";
 }
 
-.contact > div:first-child a:is(:nth-child(3),:nth-child(5))::after {
+#contact-section > div:first-child a:is(:nth-child(3),:nth-child(5))::after {
     margin-left: 0.25cqi;
 }
 
-.contact > div:first-child a:is(:nth-child(4),:nth-child(6))::before {
+#contact-section > div:first-child a:is(:nth-child(4),:nth-child(6))::before {
     margin-right: 0.70cqi;
 }
 
-.contact > div:first-child > a:nth-child(3)::after {
+#contact-section > div:first-child > a:nth-child(3)::after {
     background-image: url('../assets/phone.svg');
 }
 
-.contact > div:first-child > a:nth-child(4)::before {
+#contact-section > div:first-child > a:nth-child(4)::before {
     background-image: url('../assets/email.svg');
 }
 
-.contact > div:first-child > a:nth-child(5)::after {
+#contact-section > div:first-child > a:nth-child(5)::after {
     background-image: url('../assets/github.svg');
 }
 
-.contact > div:first-child > a:nth-child(6)::before {
+#contact-section > div:first-child > a:nth-child(6)::before {
     background-image: url('../assets/linkedin.svg');
 }
 
 @media(max-width: 800px){
-    .contact > div:last-child > img{
+    #contact-section > div:last-child > img{
         
         width: clamp(100px, 50%, 200px);
     }
 
-    .contact {  
+    #contact-section {  
         display: flex;
         flex-direction: column;
     }
 
-    .contact > div:first-child > p:first-child,
-    .contact > div:first-child > p:nth-child(2)
+    #contact-section > div:first-child > p:first-child,
+    #contact-section > div:first-child > p:nth-child(2)
     {
         margin-bottom: 0;
     }
 
-    .contact > div:first-child > a {
+    #contact-section > div:first-child > a {
         line-height: 1.8rem;
     }
 }
