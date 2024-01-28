@@ -1,21 +1,17 @@
-* {
-   /*  outline: 1px red solid; */
-}
-
-.about {
+#about-section {
     width: 95vw;
     gap: 2px;
     color: var(--font-primary);
     display: flex;
 }
 
-.about > div {
+#about-section > div {
     background-color: var(--bg-primary);
     border-radius: 30px;
 }
 
 /*--------- first div ---------*/
-.about > div:first-child {
+#about-section > div:first-child {
     flex: 1;
 
     display: flex;
@@ -26,20 +22,20 @@
     padding: 5%;
 }
 
-.about > div:first-child > img {
+#about-section > div:first-child > img {
     width: clamp(100px, 50vw, 180px);
     aspect-ratio: 1 / 1;
     background-color: var(--gray1);
 }
 
-.about > div:first-child > p { 
+#about-section > div:first-child > p { 
     text-align: justify;
     text-justify: inter-character;
     text-indent: 1.5rem;
 }
 
 /*--------- last div ---------*/
-.about > div:last-child {
+#about-section > div:last-child {
     flex: 2;
     font-size: 1.2rem;
 
@@ -52,7 +48,7 @@
 }
 
 /*header*/
-.about-section > h2 {
+.about-segment > h2 {
     font-size: 1.5rem;
     font-size: clamp(1rem, 2cqw, 1.5rem);
     color: var(--accent1);
@@ -61,7 +57,7 @@
 }
 
 /*org name*/
-.about-section:is(:first-child, :nth-child(2)) > p:nth-child(2){
+.about-segment:is(:first-child, :nth-child(2)) > p:nth-child(2){
     font-size: 1.3rem;
     font-size: clamp(1rem, 2cqw, 1.3rem);
     margin-left: 5%;
@@ -74,15 +70,15 @@
     gap: 10px;
 }
 
-.about-section:is(:first-child, :nth-child(2)) > p:nth-child(2) > span{
+.about-segment:is(:first-child, :nth-child(2)) > p:nth-child(2) > span{
     flex-shrink: 0;
     min-width: 100px;
     text-align: right;
 }
 
 /*secondary*/
-.about-section > p:nth-child(3),
-.about-section:last-child p  {
+.about-segment > p:nth-child(3),
+.about-segment:last-child p  {
     font-size: clamp(1rem, 2cqw, 1.2rem);
     margin-left: 5%;
     font-style: italic;
@@ -94,8 +90,8 @@
 }
 
 /*date*/
-.about-section > p:nth-child(3) > span, 
-.about-section:last-child p > span {
+.about-segment > p:nth-child(3) > span, 
+.about-segment:last-child p > span {
     color: var(--font-secondary);
 
     flex-shrink: 0;
@@ -103,7 +99,7 @@
     text-align: right;
 }
 
-.about-section ul {
+.about-segment ul {
     margin-left: 7%;
     font-size: 1rem;
     font-size: clamp(0.8rem, 2cqw, 1rem);
@@ -111,23 +107,23 @@
 }
 
 @media (max-width: 800px) {   
-    .about {
+    #about-section {
         flex-direction: column;
     }
 
     /*org name*/
-    .about-section:is(:first-child, :nth-child(2)) > p:nth-child(2){
+    .about-segment:is(:first-child, :nth-child(2)) > p:nth-child(2){
         line-height: 1;
     }
 
     /*secondary*/
-    .about-section > p:nth-child(3),
-    .about-section:last-child p  {
+    .about-segment > p:nth-child(3),
+    .about-segment:last-child p  {
         line-height: 1;
         margin-bottom: 10px;
     }
 
-    .about-section ul > li{
+    .about-segment ul > li{
         line-height: 1;
         margin-bottom: 10px;
     }
