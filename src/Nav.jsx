@@ -1,21 +1,18 @@
-import './styles/Nav.css'
-import sun from './assets/sun.svg'
-import moon from './assets/moon.svg'
 import { useRef, useEffect, useState } from 'react'
+import ThemeButton from './ThemeButton'
+import './styles/Nav.css'
 
 function Nav(){
-    const [icon, setIcon] = useState(sun)
     const scrollWatcher = useRef(null)
     const navRef = useRef(null)
     const titleRef = useRef(null)
-    const buttonRef = useRef(null)
     const ulRef = useRef(null)
     
     const navObserver = new IntersectionObserver((entries) => {
         /* console.log(entries[0].isIntersecting) */
         navRef.current.classList.toggle('sticky', !entries[0].isIntersecting)
         titleRef.current.classList.toggle('hide', !entries[0].isIntersecting)
-        buttonRef.current.classList.toggle('hide', !entries[0].isIntersecting)
+        document.querySelector('nav > button').classList.toggle('hide', !entries[0].isIntersecting)
         ulRef.current.classList.toggle('styled-list', !entries[0].isIntersecting)
     }, {rootMargin: "20px 0px 0px 0px"})
 
@@ -69,21 +66,7 @@ function Nav(){
         }
     }, [])
 
-
-    const setTheme = (e) => {
-        const root =  document.querySelector('#root')
-        const currentTheme = root.getAttribute('data-theme')
-        let newTheme = null
-        if(currentTheme === 'light'){
-            newTheme = 'dark';
-            setIcon(moon)
-        } else {
-            newTheme = 'light';
-            setIcon(sun)
-        }
-        root.setAttribute('data-theme', newTheme)
-    }
-
+    
     return (
         <>
         <div ref={scrollWatcher} aria-hidden="true"></div>
@@ -95,7 +78,7 @@ function Nav(){
                 <li><a href="#projects-section">Projects</a></li>
                 <li><a href="#contact-section">Contact</a></li>
             </ul>
-            <button ref={buttonRef} onClick={setTheme} ><img src={icon} data-icon={icon} alt="icon for thememode" /></button>
+            <ThemeButton />
         </nav>
         </>
     )
