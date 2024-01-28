@@ -10,3 +10,38 @@
     opacity: 1;
     filter: blur(0);
 }
+
+.move-out{
+    opacity: 0;
+}
+
+.move-out.move-in{
+    animation: fadeInAnim 0.5s ease-out forwards;    
+}
+
+.move-out.move-in:nth-child(1){
+    animation-delay: 0.1s;
+}
+
+.move-out.move-in:nth-child(2){
+    animation-delay: 0.2s;
+}
+
+.skills > div:nth-child(2) .move-out.move-in{
+    animation-delay: 0.5s;
+}
+
+ @keyframes fadeInAnim {
+    0% {
+      opacity: 0;
+    }
+    60% {
+      opacity: 0.5;
+    }
+    20% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
