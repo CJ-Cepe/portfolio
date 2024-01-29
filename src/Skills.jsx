@@ -2,6 +2,8 @@ import { useRef, useEffect } from 'react'
 import {Skills as data} from './info.json'
 import './styles/Skills.css'
 import './styles/tags.css'
+import useIntersectionObserver from './useIntersectionObserver'
+
 
 function Section({group}){
     const key = group == 'technical' ? 'technical' :
@@ -23,28 +25,7 @@ function Section({group}){
 
 function Skills(){
     const skillsRef = useRef(null)
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                entry.target.classList.add('move-in');
-            }
-        })
-    }, {threshold: 0, rootMargin: "0px 0px -150px 0px"})
-
-    useEffect(() => {
-        const segments = skillsRef.current.querySelectorAll('.move-out')
-        console.log(segments)
-        if(segments){
-            segments.forEach(segment => {observer.observe(segment)})
-        }
-
-        return () => {
-            if(segments){
-                segments.forEach(segment => {observer.unobserve(segment)})
-            }
-        } 
-
-    }, [])
+    useIntersectionObserver(skillsRef, 'move-out', 'move-in')
 
     return (
         <section id="skills-section" ref={skillsRef}>

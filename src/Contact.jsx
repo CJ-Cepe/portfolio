@@ -1,29 +1,12 @@
 import { useRef, useEffect } from 'react'
 import './styles/Contact.css'
 import circularText from './assets/circular-text.svg'
+import useIntersectionObserver from './useIntersectionObserver'
+
 
 function Contact(){
     const contactRef = useRef(null)
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                entry.target.classList.add('appear');
-            }
-        })
-    }, {threshold: 0.1, rootMargin: "0px 0px -150px 0px"})
-
-    useEffect(() => {
-        const segments = contactRef.current.querySelectorAll('.fade-in')
-        if(segments){
-            segments.forEach(segment => {observer.observe(segment)})
-        }
-
-        return () => {
-            if(segments){
-                segments.forEach(segment => {observer.unobserve(segment)})
-            }
-        }
-    }, [])
+    useIntersectionObserver(contactRef, 'fade-in', 'appear')
 
     return (
         <section id="contact-section" ref={contactRef}>

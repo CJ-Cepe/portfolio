@@ -1,6 +1,7 @@
 import './styles/About.css'
 import {About as data} from './info.json'
-import { useRef, useEffect } from 'react'
+import { useRef } from 'react'
+import useIntersectionObserver from './useIntersectionObserver'
 
 
 function Experience() {
@@ -47,28 +48,8 @@ function Training(){
 
 function About(){
     const aboutRef = useRef(null)
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                entry.target.classList.add('appear');
-            }
-        })
-    }, {threshold: 0.1, rootMargin: "0px 0px -150px 0px"})
-
-    useEffect(() => {
-        const segments = aboutRef.current.querySelectorAll('.fade-in')
-        if(segments){
-            segments.forEach(segment => {observer.observe(segment)})
-        }
-
-        return () => {
-            if(segments){
-                segments.forEach(segment => {observer.unobserve(segment)})
-            }
-        } 
-
-    }, [])
-
+    useIntersectionObserver(aboutRef, 'fade-in', 'appear')
+    
     return (
         <section id="about-section" className="about" ref={aboutRef}>
             <div>
