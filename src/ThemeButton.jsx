@@ -5,7 +5,6 @@ import moon from './assets/moon.svg'
 function ThemeButton(){
     const [theme, setTheme] = useState(localStorage.getItem('theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'))
     const [icon, setIcon] = useState(theme === 'light' ? sun : moon);
-    console.log(theme)
 
     useEffect(() => {
         document.querySelector('#root').setAttribute('data-theme', theme);
