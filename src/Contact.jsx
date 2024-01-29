@@ -6,20 +6,20 @@ import useIntersectionObserver from './useIntersectionObserver'
 
 function Contact(){
     const contactRef = useRef(null)
-    useIntersectionObserver(contactRef, 'fade-in', 'appear')
+    useIntersectionObserver(contactRef, 'pre-appear', 'appear-right')
 
     return (
         <section id="contact-section" ref={contactRef}>
             <div>
-                <p className='fade-in'>Philippines</p>
-                <p className='fade-in'>Antipolo City, 1870</p>
-                <a className='fade-in'>+639205090839</a>
-                <a className='fade-in' href='#'>cj.ceps@gmail.com</a>
-                <a className='fade-in' href='#'>github.com/CJ-Cepe</a>
-                <a className='fade-in' href='#'>linkedin.com/in/cjcepe</a>
+                <p className='pre-appear'>Philippines</p>
+                <p className='pre-appear'>Antipolo City, 1870</p>
+                <a className='pre-appear'>+639205090839</a>
+                <a className='pre-appear' href='#'>cj.ceps@gmail.com</a>
+                <a className='pre-appear' href='#'>github.com/CJ-Cepe</a>
+                <a className='pre-appear' href='#'>linkedin.com/in/cjcepe</a>
             </div>
             <div>
-                <img className='fade-in' src={circularText} alt="Open For Work" />
+                <img src={circularText} alt="Open For Work" />
             </div>
         </section>
     )

@@ -9,7 +9,7 @@ function Card({name, date, link, tools}){
     const toolList = tools.map((tool, index) => <li key={index} className='tag'data-value={tool}>{tool}</li>)
 
     return (
-        <div className="card fade-in">
+        <div className="card pre-appear">
             <div>
                 <div>
                     <img src={imgSrc} alt="" />
@@ -28,7 +28,9 @@ function Projects(){
     })
 
     const projectRef = useRef(null)
-    useIntersectionObserver(projectRef, 'fade-in', 'appear')
+    /* useIntersectionObserver(projectRef, 'fade-in', 'appear') */
+    useIntersectionObserver(projectRef, 'pre-appear', 'appear-up')
+
     
     return (
         <section id="projects-section" ref={projectRef}>

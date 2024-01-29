@@ -62,42 +62,4 @@ html {
 }
 
 
-/* animation sheet */
-.hero {
-    position: relative;
-    z-index: 0;
-    animation: moveDown linear;
-    animation-timeline: view();
-    animation-range: cover 52%, exit 100%;
-}
 
-main > div {
-    position: relative;
-    z-index: 1;
-}
-
-#skills-section{
-    view-timeline-name: --skills;
-    view-timeline-axis: x;
-}
-
-#skills-section > div:last-child > .skills-section{
-    animation: fadeIn linear;
-    animation-timeline: view(x);
-    animation-range-start: entry 20%;
-    animation-range-end: exit 100%; 
-}
-
-@keyframes moveDown {
-    0% {transform: translateY(0); }
-    100% {transform: translateY(70%); }
-}
-
-@keyframes fadeIn{
-    0% {
-       opacity: 0.5;
-    }
-    100% {
-       opacity: 1;
-    }
-}

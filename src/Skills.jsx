@@ -16,7 +16,7 @@ function Section({group}){
     })
 
     return (
-        <div className="skills-segment move-out">
+        <div className="skills-segment pre-appear">
             <h2>{key}</h2>
             <ul>{tags}</ul>
         </div>
@@ -25,7 +25,7 @@ function Section({group}){
 
 function Skills(){
     const skillsRef = useRef(null)
-    useIntersectionObserver(skillsRef, 'move-out', 'move-in')
+    useIntersectionObserver(skillsRef, 'pre-appear', 'appear-right')
 
     return (
         <section id="skills-section" ref={skillsRef}>

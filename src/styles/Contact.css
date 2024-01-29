@@ -29,26 +29,6 @@
     width: clamp(100px, 50%, 300px);
 }
 
-#contact-section > div:last-child > img:hover{
-    animation-play-state: paused;
-}
-
-@media (prefers-reduced-motion: no-preference){
-    #contact-section > div:last-child > img{
-        animation: rotate 10s linear infinite;
-    }
-}
-
-@keyframes rotate {
-    0% {
-        transform: rotate(0);
-    }
-
-    100% {
-        transform: rotate(-360deg);
-    }
-}
-
 /* ---------- Left Content ---------- */
 #contact-section > div:first-child{
     flex: 1;

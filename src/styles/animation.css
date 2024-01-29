@@ -1,67 +1,139 @@
 @media(prefers-reduced-motion: no-preference){
   /* ------------- Nav section ------------- */
   nav > div:first-child{
-    animation: reveal 0.5s ease-out;
+    opacity: 0;
+    animation: reveal-down 0.5s ease-out;
   }
 
   nav > ul {
-    animation: reveal 0.7s ease-out;
+    animation: reveal-down 0.7s ease-out;
   }
 
   nav > ul > li:nth-child(1) {
-    animation: reveal 0.7s ease-out;
+    animation: reveal-down 0.7s ease-out;
     animation-delay: 0s;
   }
 
   nav > ul > li:nth-child(2) {
-    animation: reveal 0.7s ease-out;
+    animation: reveal-down 0.7s ease-out;
     animation-delay: 0.1s;
   }
 
   nav > ul > li:nth-child(3) {
-    animation: reveal 0.7s ease-out;
+    animation: reveal-down 0.7s ease-out;
     animation-delay: 0.2s;
   }
 
   nav > ul > li:nth-child(4) {
-    animation: reveal 0.7s ease-out;
+    animation: reveal-down 0.7s ease-out;
     animation-delay: 0.3s;
   }
 
   nav > button{
-    animation: reveal 1s ease-out;
+    opacity: 0;
+    animation: reveal-down 1s ease-out;
   }
   /* ------------- Hero section ------------- */
+  .hero {
+    animation: moveDown linear;
+    animation-timeline: view();
+    animation-range: cover 52%, exit 100%;
+  }
+
   .hero > h1{
-    animation: reveal 1s ease-out;
+    animation: reveal-down 1s ease-out;
   }
   
   .hero > h1 > em{
-    animation: reveal 1s ease-out;
+    animation: reveal-down 1s ease-out;
     animation-delay: 0.2s;
   
   }
   
   .hero > h1 > em > span{
-    animation: reveal 1s ease-out;
+    animation: reveal-down 1s ease-out;
     animation-delay: 0.4s;
   }
   
   .hero > p {
     opacity: 0;
-    animation: fadeIn 1s ease-out forwards;
-    animation-delay: 0.8s;
+    animation: fade-in 1s ease-out forwards;
+    animation-delay: 0.6s;
   
   }
   
   .hero > button {
     opacity: 0;
-    animation: fadeIn 1s ease-out forwards;
-    animation-delay: 1.5s;
+    animation: fade-in 1s ease-out forwards;
+    animation-delay: 1s;
+  }
+
+  /* ------------- about section ------------- */
+  .pre-appear {
+    opacity: 0;
+  }
+
+  .appear-up{
+    animation: reveal-up 0.5s forwards;
+  }
+
+  /* ------------- skills section ------------- */
+  .appear-right {
+    animation: reveal-right 0.5s forwards;
+  }
+
+  /* ------------- project section ------------- */
+  #projects-section .pre-appear:nth-child(1){ animation-delay: 0.1s; }
+  #projects-section .pre-appear:nth-child(2){ animation-delay: 0.2s; }
+  #projects-section .pre-appear:nth-child(3){ animation-delay: 0.3s; }
+  #projects-section .pre-appear:nth-child(4){ animation-delay: 0.4s; }
+  #projects-section .pre-appear:nth-child(5){ animation-delay: 0.5s; }
+  #projects-section .pre-appear:nth-child(6){ animation-delay: 0.6s; }
+  #projects-section .pre-appear:nth-child(6){ animation-delay: 0.7s; }
+
+  /* ------------- skills section ------------- */
+  #contact-section  .appear-right {
+      animation: reveal-right 0.5s forwards;
+  }
+
+  #contact-section > div:last-child > img{
+    animation: rotate 10s linear infinite;
   }
 }
 
-@keyframes fadeIn {
+#contact-section > div:last-child > img:hover{
+  animation-play-state: paused;
+}
+
+@keyframes reveal-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-10%)
+  }
+  70%{
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes reveal-up{
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  70% {
+    opacity: 0.7;
+  } 
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
   0% {
     filter: blur(5px);
     opacity: 0;
@@ -76,7 +148,7 @@
   }
 }
 
-@keyframes reveal {
+@keyframes reveal-down {
   0% {
     opacity: 0;
     transform: translateY(-50%)
@@ -90,87 +162,34 @@
   }
 }
 
-@keyframes move-down {
+@keyframes rotate {
   0% {
-    transform: translateY(-60%)
+      transform: rotate(0);
   }
   100% {
-    transform: translateY(0);
+      transform: rotate(-360deg);
   }
 }
 
-.fade-in{
-    opacity: 0;
-    filter: blur(5px);
-    transition: opacity 0.3s ease;
-}
-
-
-.fade-in.appear{
-    opacity: 1;
-    filter: blur(0);
-}
-
-.move-out{
-    opacity: 0;
-}
-
-.move-out.move-in{
-    animation: fadeInAnim 0.5s ease-out forwards;    
-}
-
-.move-out.move-in:nth-child(1){
-    animation-delay: 0.1s;
-}
-
-.move-out.move-in:nth-child(2){
-    animation-delay: 0.2s;
-}
-
-.skills > div:nth-child(2) .move-out.move-in{
-    animation-delay: 0.5s;
-}
-
- @keyframes fadeInAnim {
-    0% {
-      opacity: 0;
-    }
-    60% {
-      opacity: 0.5;
-    }
-    20% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-
-/* Project section delay */
-#projects-section .normal:nth-child(1){ animation-delay: 0.1s; }
-#projects-section .normal:nth-child(2){ animation-delay: 0.2s; }
-#projects-section .normal:nth-child(3){ animation-delay: 0.3s; }
-#projects-section .normal:nth-child(4){ animation-delay: 0.4s; }
-#projects-section .normal:nth-child(5){ animation-delay: 0.5s; }
-#projects-section .normal:nth-child(6){ animation-delay: 0.6s; }
-#projects-section .normal:nth-child(6){ animation-delay: 0.7s; }
-
-.normal {
-  opacity: 0;
-}
-
-.image-animation {
-  animation: enter-animation 0.8s 1 forwards;
-}
-
-@keyframes enter-animation {
+@keyframes moveDown {
   0% {
-    transform: translateY(100px);
-    opacity: 0;
+    transform: translateY(0); 
   }
   100% {
-    transform: translateY(0);
-    opacity: 1;
+    transform: translateY(70%); 
   }
 }
+
+
+/* animation sheet */
+/* move to hero */
+.hero {
+  position: relative;
+  z-index: 0;
+}
+
+main > div {
+  position: relative;
+  z-index: 1;
+}
+
