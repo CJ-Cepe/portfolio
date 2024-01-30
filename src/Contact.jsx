@@ -20,6 +20,7 @@ function Contact(){
             </div>
             <div>
                 <img src={circularText} alt="Open For Work" />
+                <span>😉</span>
             </div>
         </section>
     )

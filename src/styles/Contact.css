@@ -16,19 +16,31 @@
 }
 
 /* ---------- Right Content ---------- */
+/* * {
+    outline: red 1px solid;
+} */
 #contact-section > div:last-child{
     flex: 0.6;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 #contact-section > div:last-child > img{
    /*  max-width: 50%; */
     width: clamp(100px, 50%, 300px);
+    position: absolute;
+    z-index: 1;
 }
 
+#contact-section > div:last-child > span{
+    /*  max-width: 50%; */
+    text-align: center;
+     width: auto;
+     font-size: 300%;
+ }
 /* ---------- Left Content ---------- */
 #contact-section > div:first-child{
     flex: 1;
