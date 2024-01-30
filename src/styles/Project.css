@@ -5,10 +5,97 @@
 
     padding: 5rem 5%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 3rem;
 }
 
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* ---------- image cont - left ---------- */
+.card > div:first-child {
+    flex:1;
+}
+
+.card > div:first-child > img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+
+/* ---------- content cont - right ---------- */
+.card > div:last-child {
+    flex:1;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 0.5fr 1.5fr 0.5fr;
+    align-items: center;
+}
+
+/* title */
+.card > div:last-child > p:first-child{
+    font-size: 2rem;
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+}
+
+/* date */
+.card > div:last-child > span{
+    grid-column: 4 / 5;
+    margin-left: auto;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+/* tags */
+.card > div:last-child > ul{
+    display: flex;
+    max-height: 200px;
+    list-style-type: none;
+    gap: 0.5rem;
+}
+
+/* description */
+.card > div:last-child > p:nth-child(4){
+    grid-row: 3 / 4;
+    grid-column: 1 / 5;
+}
+
+/* button links */
+.card > div:last-child > a:nth-child(5){
+    grid-column: 2 / 3;
+}
+
+.card > div:last-child > a:nth-child(6){
+    grid-column: 3 / 4;
+}
+
+.card > div:last-child > a{
+    grid-row: 4 / 5;
+    justify-self: center;
+    text-align: center;
+
+    text-decoration: none;
+    
+    min-width: 120px;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 2px solid var(--bg-secondary);
+}
+
+.card > div:last-child > a::after{
+    content: "🔗";
+}
+
+
+/* 
 .card {
     display: flex;
     flex-direction: column;
@@ -100,4 +187,4 @@
     #projects-section > .card > div > div:first-child > img{
         transition: transform 0.1s ease-out 0s;
     }
-}
+} */

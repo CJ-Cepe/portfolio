@@ -3,35 +3,38 @@ import './styles/Project.css'
 import { useRef, useEffect } from 'react'
 import useIntersectionObserver from './useIntersectionObserver'
 
-
-function Card({name, date, link, tools}){
+function Card({project}){
+    const {name, date, demo, link, tools, source, description} = project
     const imgSrc = new URL(link, import.meta.url).href 
     const toolList = tools.map((tool, index) => <li key={index} className='tag'data-value={tool}>{tool}</li>)
 
     return (
         <div className="card pre-appear">
             <div>
-                <div>
-                    <img loading ="lazy" decoding="async" src={imgSrc} alt="" />
-                </div>
+                <img loading ="lazy" decoding="async" src={imgSrc} alt="" />
                 <div></div>
             </div>
-            <p>{name}<span>{date}</span></p>
-            <ul>{toolList}</ul>
+            <div>
+                <p>{name}</p>
+                <span>{date}</span>
+                <ul>{toolList}</ul>
+                <p>{description}</p>
+                <a href={source}>Source Code</a>
+                <a href={demo}>Live Demo</a>
+            </div>
         </div>
     )
 }
 
 function Projects(){
     const cards = data.map((project, index) => {
-        return <Card key={index} name={project.name} date={project.date} link={project.link} tools={project.tools}/>
+        return <Card key={index} project={project}/>
     })
 
     const projectRef = useRef(null)
-    /* useIntersectionObserver(projectRef, 'fade-in', 'appear') */
     useIntersectionObserver(projectRef, 'pre-appear', 'appear-up')
 
-    
+
     return (
         <section id="projects-section" ref={projectRef}>
             {cards}
