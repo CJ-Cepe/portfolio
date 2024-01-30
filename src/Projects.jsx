@@ -12,7 +12,7 @@ function Card({name, date, link, tools}){
         <div className="card pre-appear">
             <div>
                 <div>
-                    <img src={imgSrc} alt="" />
+                    <img loading ="lazy" src={imgSrc} alt="" />
                 </div>
                 <div></div>
             </div>
