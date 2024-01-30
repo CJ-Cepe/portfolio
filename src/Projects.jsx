@@ -19,8 +19,10 @@ function Card({project}){
                 <span>{date}</span>
                 <ul>{toolList}</ul>
                 <p>{description}</p>
-                <a href={source}>Source Code</a>
-                <a href={demo}>Live Demo</a>
+                <div>
+                    <a href={source}>Source Code</a>
+                    <a href={demo}>Live Demo</a>
+                </div>
             </div>
         </div>
     )
