@@ -27,6 +27,12 @@
 .card > div:first-child > img {
     width: 100%;
     aspect-ratio: 16 / 9;
+    background-color: gray;
+}
+
+.card > div:first-child > video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
 }
 
 
