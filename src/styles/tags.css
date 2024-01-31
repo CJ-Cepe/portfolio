@@ -1,104 +1,291 @@
 .tag {
     /* font-size: 1rem; */
     font-size: clamp(0.8rem, 3vw ,1rem);
+    background-color: #dcdcdc;
     color: var(--black1);
     border-radius: 5px;
     padding: 0.2rem 0.5rem;
 }
 
 .tag[data-value="html" i] {
-    background-color: #f67e5f;
+    background-color: #FF5722;
+    color: white;
 }
 
 .tag[data-value="css" i] {
-    background-color: #264DE4;
+    background-color: #0096DC;
+    color: white;
 }
 
 .tag[data-value="markdown" i] {
-    background-color: #FFFF00;
+    background-color: #535358;
+    color: white;
 }
 
 .tag[data-value="javascript"i], 
 .tag[data-value="js"i]{
-    background-color: #F0DB4F;
+    background-color: #FFDF00;
 }
 
 .tag[data-value="json" i] {
-    background-color: yellow;
+    background-color: #9777A8;
+    color: #E9E9E0;
 }
 
 .tag[data-value="React" i] {
-    background-color: #61DBFB;
+    background-color: #61DAFB;
 }
 
 .tag[data-value="Git & GitHub" i] {
-    background-color: #F1502F;
+    background-color: #F05033;
+    color: white;
 }
 
 .tag[data-value="webpack" i] {
-    background-color: yellow;
+    background-color: #8ED6FB;
+    color: #1C78C0;
 }
 
 .tag[data-value="vite" i] {
-    background-color: rgb(184, 3, 184);
-    color: yellow;
+    background-color: #926AFF;
+    color: #FFD72F;
     
 }
 
 .tag[data-value="eslint & prettier" i] {
-    background-color: yellow;
+    background-color: #512BCB;
+    color: #d8d7ff;
 }
 
 .tag[data-value="jest" i] {
-    background-color: yellow;
+    background-color: #3B3738;
+    color: #da431a;
 }
 
 .tag[data-value="npm" i] {
-    background-color: yellow;
+    background-color: #CB3837;
+    color: white;
 }
 
 .tag[data-value="vscode" i] {
-    background-color: yellow;
-}
-
-.tag[data-value="vite" i] {
-    background-color: yellow;
+    background-color: #1F9CF0;
+    color: white;
 }
 
 .tag[data-value="xubuntu" i] {
-    background-color: yellow;
+    background-color: #0044AA;
+    color: white;
 }
 
 .tag[data-value="windows" i] {
-    background-color: yellow;
+    background-color: #00ADEF;
+    color: white;
 }
 
 /*================ Design ================*/
 .tag[data-value="figma" i] {
-    background-color: yellow;
+    background-color: #2E3139;
+    color: #0ACF84;
 }
 
 .tag[data-value="illustrator" i] {
-    background-color: yellow;
+    background-color: #330000;
+    color: #FF9A00;
 }
 
 .tag[data-value="notion" i] {
-    background-color: yellow;
+    background-color: white;
+    color: black;
 }
 
 .tag[data-value="ms office suite" i] {
-    background-color: yellow;
+    background-color: white;
+    color: #FF5722;
 }
 
-.tag[data-value="google docs" i] {
-    background-color: yellow;
+.tag[data-value="google workspace" i] {
+    background-color: white;
+    color: #00AC48;
 }
 
 /*================ Communication ================*/
 .tag[data-value="filipino" i] {
-    background-color: yellow;
+    background-color: white;
+    color: #1E419C;
+}
+
+.tag[data-value="filipino" i]:after{
+    content: " 🇵🇭"
 }
 
 .tag[data-value="english" i] {
-    background-color: yellow;
+    background-color: white;
+    color: #BE0B31;
+}
+
+.tag[data-value="english" i]:after {
+    content: " 🇺🇸";
+}
+
+/*================ Others ================*/
+
+.tag[data-value="C/C++" i] {
+    background-color: #0180CD;
+    color: white; 
+}
+.tag[data-value="java" i] {
+    background-color: #4AA8D5;
+    color: #EC2025;
+}
+.tag[data-value="python" i] {
+    background-color: #376F9F;
+    color: #FFDD4E;
+}
+.tag[data-value="r" i] {
+    background-color: #ABACB0;
+    color: #1F65B7;
+}
+.tag[data-value="php" i] {
+    background-color: #777BB3;
+    color: black;
+}
+.tag[data-value="sql" i] {
+    background-color: #00BCF2;
+    color: white;
+}
+.tag[data-value="visual basic" i] {
+    background-color: white;
+    color: #0C36AC;
+}
+.tag[data-value="Turbo C++" i] {
+    background-color: #6F6F6F;
+    color: #FDFF00;
+}
+.tag[data-value="Dev-C++" i] {
+    background-color: #003987;
+    color: white;
+}
+.tag[data-value="Notepad++" i] {
+    background-color: #8CDC36;
+    color:black;
+}
+.tag[data-value="NetBeans" i] {
+    background-color: #9EC7FD;
+    color: #3A4972;
+}
+.tag[data-value="IntelliJ IDEA" i] {
+    background-color: #137CF0;
+    color: black;
+}
+.tag[data-value="Jupyter Notebook" i] {
+    background-color: white;
+    color: #F37726;
+}
+.tag[data-value="Anaconda" i] {
+    background-color: white;
+    color: #41AF28;
+}
+.tag[data-value="Google Collab" i] {
+    background-color: #E8710A;
+    color: white;
+}
+.tag[data-value="RStudio" i] {
+    background-color: #75AADB;
+    color: white;
+}
+.tag[data-value="Proteus" i] {
+    background-color: #1C79B3;
+    color: white;
+}
+.tag[data-value="MATLAB" i] {
+    background-color: white;
+    color: #FFA600;
+}
+.tag[data-value="Cisco packet tracer" i] {
+    background-color: #0A8AF7;
+    color: white;
+}
+.tag[data-value="Lucid Chart" i] {
+    background-color: white;
+    color: #F78D1E;
+}
+.tag[data-value="Access" i] {
+    background-color: #B02233;
+    color: white;
+}
+.tag[data-value="MySql" i] {
+    background-color: white;
+    color: #A5BECD;
+}
+.tag[data-value="JavaFX Scene Builder" i] {
+    background-color: white;
+    color: #E76F00;
+}
+.tag[data-value="Bootstrap Studio" i] {
+    background-color: #BA58F2;
+    color: white;
+}
+.tag[data-value="Photoshop" i] {
+    background-color: #001E36;
+    color: #31A8FF;
+}
+.tag[data-value="Effect House" i] {
+    background-color: #4C318A;
+    color: white;
+}
+.tag[data-value="Blender" i] {
+    background-color: #EA7600;
+    color: #265787;
+}
+.tag[data-value="Unreal Engine" i] {
+    background-color: white;
+    color: black;
+}
+.tag[data-value="Davinci Resolve" i] {
+    background-color: #1F3347;
+    color: #EF4F51;
+}
+.tag[data-value="Audacity" i] {
+    background-color: #2B3D90;
+    color: #FDC46D;
+}
+.tag[data-value="Obsidian" i] {
+    background-color: #181E52;
+    color: #7133D2;
+}
+.tag[data-value="Numpy" i] {
+    background-color: white;
+    color: #4D77CF;
+}
+.tag[data-value="Pandas" i] {
+    background-color: white;
+    color: #180D58;
+}
+.tag[data-value="Matplotlib" i] {
+    background-color: white;
+    color: #205A7E;
+}
+.tag[data-value="TensorFlow" i] {
+    background-color: white;
+    color: #ED8E24;
+}
+.tag[data-value="Scikit-learn" i] {
+    background-color: #F89939;
+    color: #010101;
+}
+.tag[data-value="PyTorch" i] {
+    background-color: white;
+    color: #EE4C2C;
+}
+.tag[data-value="Flask" i] {
+    background-color: white;
+    color: black;
+}
+.tag[data-value="NodeJs" i] {
+    background-color: #83CD29;
+    color: #414238;
+}
+.tag[data-value="Express" i] {
+    background-color: white;
+    color: black;
 }
