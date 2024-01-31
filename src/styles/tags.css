@@ -134,8 +134,8 @@
     color: white; 
 }
 .tag[data-value="java" i] {
-    background-color: #4AA8D5;
-    color: #EC2025;
+    background-color: white;
+    color: #4AA8D5;
 }
 .tag[data-value="python" i] {
     background-color: #376F9F;
