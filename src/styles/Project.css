@@ -22,19 +22,33 @@
 /* ---------- image cont - left ---------- */
 .card > div:first-child {
     flex:1;
+    background-color: black;
 }
 
 .card > div:first-child > img {
     width: 100%;
     aspect-ratio: 16 / 9;
     background-color: gray;
+    object-fit: cover;
 }
 
 .card > div:first-child > video {
     width: 100%;
     aspect-ratio: 16 / 9;
+    object-fit: cover;  
 }
 
+.card > div:first-child > video:hover {
+    animation: fade 0.5s;
+}
+
+
+@keyframes fade {
+    0% {opacity: 1;}
+    5% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+  }
 
 /* ---------- content cont - right ---------- */
 .card > div:last-child {
