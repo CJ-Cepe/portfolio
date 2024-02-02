@@ -1,36 +1,82 @@
 #skills-section {
     width: 95vw;
-    border-radius: 20px;
-    color: var(--font-primary);
+    border-radius: 30px;
+    overflow-x: hidden; 
 
+    color: var(--font-primary);
+    background-color: aqua;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    
+    
+    scroll-snap-type: x mandatory;
+    
     display: flex;
-    overflow-x: scroll;
     gap: 2px;
-    /* scroll-snap-type: x mandatory; */
 }
 
-#skills-section > div {
+/* ----- Arrows ----- */
+#skills-section > div:nth-child(3){
+    align-self: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 90vw;
+
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+#skills-section > div:nth-child(3) > .arrow{
+    background-color: rgb(136, 0, 255);
+    height: 50px;
+    width: 20px;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+/* ----- div container ----- */
+#skills-section > div:is(:nth-child(1), :nth-child(2)) {
     background-color: var(--bg-primary);
     border-radius: 30px;
     min-width: 80%;
     padding: 1rem;
-
-    flex: 1;
 }
 
-#skills-section > div:nth-child(2){
-   /*  scroll-snap-align: center; */
+/* first div container */
+#skills-section > div:nth-child(1) {
+     scroll-snap-align: center;
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     grid-template-rows: 0.7fr 0.5fr;
 }
 
-#skills-section > div:first-child {
-   /*  scroll-snap-align: center; */
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 0.7fr 0.5fr;
+/* second div container */
+#skills-section > div:nth-child(2) {
+    scroll-snap-align: center;
 }
 
-.skills-segment> h2 {
+
+/* ----- contents ----- */
+.skills-segment{
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.skills-segment > h2 {
     font-size: clamp(1rem, 3vw ,1.5rem);
+    text-transform: capitalize;
+}
+
+.skills-segment > ul {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 .skills-segment:first-child{
@@ -48,50 +94,16 @@
     grid-column: 2 / 3;
 }
 
-.skills-segment{
-    padding: 5%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.skills-segment > h2 {
-    text-transform: capitalize;
-}
-
-.skills-segment > ul {
-    display: flex;
-    list-style-type: none;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-
 /*------ Horizontal Scroll bar ------ */
-/* Chrome, Edge, and Safari ? */
-#skills-section::-webkit-scrollbar{
-    -webkit-appearance: none;
-   background: transparent;
-   border-radius: 20px;
-   height: 0px;
+#skills-section{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-#skills-section:hover::-webkit-scrollbar{
-    height: 15px;
- }
- 
-#skills-section::-webkit-scrollbar-thumb{
-    background: var(--accent1);
-    border-top: 3.5px solid var(--bg-secondary);
-    border-bottom: 2px solid var(--bg-secondary);
-    border-radius: 10px;
+#skills-section::webkit-scrollbar{
+    display: none;
 }
 
-/* Firefox ? */
-#skills-section {
-    scrollbar-width: thin;
-    scrollbar-color: var(--accent1) transparent;
-}
 
 /*------ media queries ------ */
 @media (max-width: 800px) {

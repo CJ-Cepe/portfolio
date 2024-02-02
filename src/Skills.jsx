@@ -5,7 +5,7 @@ import './styles/tags.css'
 import useIntersectionObserver from './useIntersectionObserver'
 
 
-function Section({group}){
+function Segment({group}){
     const key = group == 'technical' ? 'technical' :
         group == 'design' ? 'design' :
         group == 'communication' ? 'communication' : 'others'
@@ -27,15 +27,27 @@ function Skills(){
     const skillsRef = useRef(null)
     useIntersectionObserver(skillsRef, 'pre-appear', 'appear-right')
 
+    const toScrollLeft = () => {
+        skillsRef.current.scrollLeft = 0;
+    }
+
+    const toScrollRight = () => {
+        skillsRef.current.scrollLeft = skillsRef.current.scrollWidth;
+    }
+
     return (
         <section id="skills-section" ref={skillsRef}>
             <div>
-                <Section group="technical"/>
-                <Section group="design"/>
-                <Section group="communication"/>
+                <Segment group="technical"/>
+                <Segment group="design"/>
+                <Segment group="communication"/>
             </div>
             <div>
-                <Section group="others"/>
+                <Segment group="others"/>
+            </div>
+            <div>
+                <button className="arrow" data-arrow="left"onClick={toScrollLeft}>&lt;</button>
+                <button className="arrow" data-arrow="right" onClick={toScrollRight}>&gt;</button>
             </div>
         </section>
     )
