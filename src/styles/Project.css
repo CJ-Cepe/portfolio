@@ -27,6 +27,7 @@
 
 .card > div:first-child > img {
     width: 100%;
+    height: 100%;
     aspect-ratio: 16 / 9;
     background-color: gray;
     object-fit: cover;
@@ -34,6 +35,7 @@
 
 .card > div:first-child > video {
     width: 100%;
+    height: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;  
 }
