@@ -10,7 +10,7 @@
 }
 
 .hero > h1 {
-    color: var(--font-secondary);
+    color: var(--font-tertiary);
     font-size: 2rem;
     font-weight: 400;
 }
@@ -45,9 +45,18 @@
     font-size: 1rem;
     padding: 1rem 2rem;
     margin-top: 2rem;
-    background-color: var(--accent2);
     border-radius: 10px;
-    border: 2px solid var(--bg-secondary);
+
+    border: 2px solid var(--border);
+    box-shadow: 3px 3px 0px 0px var(--shadow);
+    -webkit-box-shadow: 3px 3px 0px 0px var(--shadow);
+    -moz-box-shadow: 3px 3px 0px 0px var(--shadow);
+
+    transition: background-color 0.2s ease-out;
+}
+
+.hero > button:hover {
+    background-color: var(--accent2);
 }
 
 @media(max-width: 600px){

@@ -13,7 +13,7 @@ html {
     font-family: var(--font1);
     font-weight: 400;
     background-color: var(--bg-primary);
-    background-image: radial-gradient(var(--bg-darker) 2px, var(--bg-primary) 1px);
+    background-image: radial-gradient(var(--bg-tertiary) 2px, var(--bg-primary) 1px);
     background-size: 50px 50px;
 }
 
