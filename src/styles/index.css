@@ -2,10 +2,12 @@
 
 :root {
   --font1: 'Hanken Grotesk', 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --space: '2rem';
+  --radius: '30px';
 
   --white1: #FFFFFF;
   --white2: #EDEDED;
-  --white3: #EDEDED;
+  --white3: #E3E3E3;
 
   --black1: #000000;
   --black2: #1B1B1B;
@@ -16,32 +18,44 @@
   --gray3: #5A5A5A;
 
   --yellow1: #FCFD96;
-  --yellow2: #FCFD96;
+  --yellow2: #F4D839;
   --orange1: #FF8652;
   --purple1: #6216FF;
+
+  --blue1: #1282FF;
+  --blue2: #103FFF;
+  --red1: #DD2231;
+}
+
+#root[data-theme="light"]{
+  --bg-primary: var(--white2);
+  --bg-secondary: var(--black2);
+  --bg-tertiary: var(--gray1);
+
+  --font-primary: var(--black2);
+  --font-secondary: var(--white2);
+  --font-tertiary: var(--gray3);
+
+  --accent1: var(--purple1);
+  --accent2: var(--orange1);
 }
 
 #root[data-theme="dark"]{
   --bg-primary: var(--black2);
   --bg-secondary: var(--white2);
-  --bg-darker: var(--black1);
+  --bg-tertiary: var(--black1);
+
   --font-primary: var(--white2);
-  --font-secondary: var(--gray2);
-  --font-tertiary: var(--black1);
-  --accent1: var(--purple1);
-  --accent2: var(--orange1);
+  --font-secondary: var(--black1);
+  --font-tertiary: var(--gray2);
+
+  --accent1: var(--blue1);
+  --accent2: var(--red1);
+
+  --nav-btn-bg: var(--blue2);
 }
 
-#root[data-theme="light"]{
-  --bg-primary: var(--white2);
-  --bg-secondary: var(--black1);
-  --bg-darker: var(--gray1);
-  --font-primary: var(--black2);
-  --font-secondary: var(--gray3);
-  --font-tertiary: var(--white1);
-  --accent1: var(--purple1);
-  --accent2: var(--orange1);
-}
+
 
 #root * {
   /* transition: color 0.2s ease-in; */
