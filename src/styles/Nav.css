@@ -16,8 +16,8 @@ nav {
 nav > div { 
     grid-column: 1 / 2;
     width: 85px;
-    background-color: var(--bg-secondary);
-    color: var(--font-tertiary);
+    background-color: var(--font-primary);
+    color: var(--font-secondary);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     font-weight: 400;
@@ -28,7 +28,12 @@ nav > div {
     align-items: center;
     text-align: center;
 
-    transition: opacity 0.5s, transform 0.3s;
+    transition: opacity 0.5s, transform 0.3s, color 0.2s;
+}
+
+nav > div:hover{
+    color: var(--accent2);
+    font-weight:bold;
 }
 
 /* --------------- Sticky --------------- */
@@ -48,6 +53,8 @@ nav > div {
 .hide {
     opacity: 0;
     transform: translateY(-20px);
+    pointer-events: none;
+    user-select: none;
 }
 
 .active {
@@ -55,7 +62,7 @@ nav > div {
 }
 
 .active > a {
-    color: var(--font-tertiary);
+    color: var(--font-secondary);
 }
 
 .active > a:hover {
@@ -77,8 +84,8 @@ nav > ul {
     margin-left: 1.5rem;
     padding: 0 0.5rem;
     height: 50%;
-    
-    border-radius: 20px;
+
+    border-radius: 30px;
     border: 2px solid transparent;
     transition: border 0.2s;
 
@@ -93,7 +100,7 @@ nav a {
 }
 
 nav > ul > li {
-   border-radius: 20px;
+   border-radius: 30px;
    padding: 3px 10px;
    transition: background-color 0.2s ease-out;
 }
@@ -119,7 +126,12 @@ nav > button > img {
 }
 
 nav > button > img[src="/src/assets/moon.svg"] {
-    width: 50px;
+    width: 45px;
+    filter: invert(17%) sepia(90%) saturate(6379%) hue-rotate(235deg) brightness(99%) contrast(106%);
+}
+
+nav > button:hover{
+    transform: scale(1.2);
 }
 
 /* --------------- media queries ---------------*/

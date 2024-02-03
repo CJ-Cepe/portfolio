@@ -46,11 +46,11 @@
 
 #root[data-theme="dark"]{
   --bg-primary: var(--black2);
-  --bg-secondary: var(--white2);
+  --bg-secondary: var(--gray4);
   --bg-tertiary: var(--black1);
 
   --font-primary: var(--white2);
-  --font-secondary: var(--black1);
+  --font-secondary: var(--black2);
   --font-tertiary: var(--gray2);
 
   --accent1: var(--blue1);
