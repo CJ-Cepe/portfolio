@@ -1,46 +1,53 @@
 #contact-section {
     width: 95vw;
     min-height: 60vh;
-    border-radius: 20px;
+    border-radius: var(--radius);
     font-size: clamp(1.2rem, 3cqw, 2rem);
     color:var(--font-primary);
 
     display: flex;
-    gap: 2px;
+    gap: var(--gap);
 }
 
 #contact-section > div {
     background-color: var(--bg-primary);
-    border-radius: 30px;
+    border-radius: var(--radius);
     padding: 2rem 0;
 }
 
 /* ---------- Right Content ---------- */
-/* * {
-    outline: red 1px solid;
-} */
 #contact-section > div:last-child{
     flex: 0.6;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
     position: relative;
+    min-height: 130px;
+    overflow: hidden;
+    padding: 5px;
 }
 
+/* rorating text */
 #contact-section > div:last-child > img{
-   /*  max-width: 50%; */
-    width: clamp(100px, 50%, 300px);
+    /* width: clamp(100px, 30cqw, 300px); */
+    width: 60%;
+    max-width: 300px;
     position: absolute;
     z-index: 1;
 }
 
+html:has(#root[data-theme="dark"]) #contact-section > div:last-child > img {
+    filter: invert(17%) sepia(90%) saturate(6379%) hue-rotate(235deg) brightness(99%) contrast(106%);
+}
+
+/* winking emoji */
 #contact-section > div:last-child > span{
-    /*  max-width: 50%; */
     text-align: center;
-     width: auto;
-     font-size: 300%;
- }
+    font-size: 300%;
+}
+
 /* ---------- Left Content ---------- */
 #contact-section > div:first-child{
     flex: 1;
@@ -75,7 +82,7 @@
 
 #contact-section > div:first-child > a {
     line-height: 3rem;
-    color: var(--font-secondary);
+    color: var(--font-tertiary);
     text-decoration: none;
 }
 
@@ -132,8 +139,7 @@
 
 @media(max-width: 800px){
     #contact-section > div:last-child > img{
-        
-        width: clamp(100px, 50%, 200px);
+        width: clamp(115px, 20cqmin, 150px);
     }
 
     #contact-section {  

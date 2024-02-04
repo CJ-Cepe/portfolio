@@ -13,10 +13,10 @@ function Contact(){
             <div>
                 <p className='pre-appear'>Philippines</p>
                 <p className='pre-appear'>Antipolo City, 1870</p>
-                <a className='pre-appear'>+639205090839</a>
-                <a className='pre-appear' href='#'>cj.ceps@gmail.com</a>
-                <a className='pre-appear' href='#'>github.com/CJ-Cepe</a>
-                <a className='pre-appear' href='#'>linkedin.com/in/cjcepe</a>
+                <a className='pre-appear' href ="tel:+639205090839">+639205090839</a>
+                <a className='pre-appear' href = "mailto: cj.ceps@gmail.com">cj.ceps@gmail.com</a>
+                <a className='pre-appear' href='https://github.com/CJ-Cepe' target="_blank">github.com/CJ-Cepe</a>
+                <a className='pre-appear' href='https://www.linkedin.com/in/cjcepe/' target="_blank">linkedin.com/in/cjcepe</a>
             </div>
             <div>
                 <img src={circularText} alt="Open For Work" />

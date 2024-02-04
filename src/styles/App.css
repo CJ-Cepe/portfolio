@@ -20,10 +20,11 @@ html {
 main > div {
     overflow: hidden;
     background-color: var(--bg-secondary);
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2px;
+    gap: var(--gap);
 }
 
 /* section { 
