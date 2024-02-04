@@ -26,6 +26,9 @@
   --blue1: #1282FF;
   --blue2: #103FFF;
   --red1: #DD2231;
+
+  --radius: 25px;
+  --gap: 2px;
 }
 
 #root[data-theme="light"]{

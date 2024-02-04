@@ -26,7 +26,7 @@ function App() {
         <Projects/>
         <Contact/>
         <footer>
-          Copyright©2024, CJ-Cepe
+          Made with ❤️ | © 2024 CJ-Cepe
         </footer>
       </div>
     </main>
