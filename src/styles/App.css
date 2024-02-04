@@ -31,6 +31,7 @@ main > div {
 } */
 
 /* ---------- Footer ---------- */
+
 footer {
     color: var(--font-primary);
     background-color: var(--bg-primary);
@@ -50,21 +51,40 @@ footer {
     align-items: center;
 }
 
-/* ----- main scroll bar ----- */
-/* outside of root scope */
+/* ---------- Main Scroll Bar ---------- */
+
+/* Mozilla fallback */
+html:has(#root[data-theme="light"]) {
+    /* scrollbar-gutter: stable; */
+    scrollbar-width: thin;
+    scrollbar-color: var(--purple1) var(--black2);
+}
+
+html:has(#root[data-theme="dark"]) {
+    /* scrollbar-gutter: stable; */
+    scrollbar-width: thin;
+    scrollbar-color: var(--blue2) var(--gray4);
+}
+
+/* Chrome, Edge, Safari */
 ::-webkit-scrollbar{
-    background: var(--black2);
     width: 10px;
 }
 
-::-webkit-scrollbar-thumb{
+html:has(#root[data-theme="light"]) ::-webkit-scrollbar{
+    background: var(--black2);
+}
+
+html:has(#root[data-theme="light"]) ::-webkit-scrollbar-thumb{
     background-color: var(--purple1);
 }
 
-html {
-    /* scrollbar-gutter: stable; */
-    scrollbar-width: thin;
-    scrollbar-color: var(--accent1) var(--bg-primary);
+html:has(#root[data-theme="dark"]) ::-webkit-scrollbar{
+    background: var(--gray4);
+}
+
+html:has(#root[data-theme="dark"]) ::-webkit-scrollbar-thumb{
+    background-color: var(--blue2);
 }
 
 
