@@ -1,6 +1,6 @@
 #contact-section {
     width: 95vw;
-    min-height: 60vh;
+    min-height: 40vh;
     border-radius: var(--radius);
     font-size: clamp(1.2rem, 3cqw, 2rem);
     color:var(--font-primary);
@@ -29,11 +29,12 @@
     padding: 5px;
 }
 
-/* rorating text */
+/* rotating text */
 #contact-section > div:last-child > img{
     /* width: clamp(100px, 30cqw, 300px); */
     width: 60%;
     max-width: 300px;
+
     position: absolute;
     z-index: 1;
 }
@@ -45,7 +46,8 @@ html:has(#root[data-theme="dark"]) #contact-section > div:last-child > img {
 /* winking emoji */
 #contact-section > div:last-child > span{
     text-align: center;
-    font-size: 300%;
+    /* font-size: 300%; */
+    font-size: clamp(50px, 8vw ,130px);
 }
 
 /* ---------- Left Content ---------- */
@@ -63,45 +65,53 @@ html:has(#root[data-theme="dark"]) #contact-section > div:last-child > img {
     text-transform: uppercase;
 }
 
+/* "Philippines" */
 #contact-section > div:first-child > p:first-child {
     font-size: 3rem;
     font-size: clamp(1.3rem, 4cqw, 3rem);
-    font-weight: 800;
     letter-spacing: clamp(10px, 1.2cqi, 14px);
+    font-weight: 800;
     padding-left: 10px;
     margin-bottom: 0.2rem;
 }
 
+/* "Antips" */
 #contact-section > div:first-child > p:nth-child(2) {
     font-size: 2.3rem;
     font-size: clamp(1.35rem, 3.6cqw, 2.3rem);
-    font-weight: 400;
     letter-spacing: clamp(0.15px, 0.15cqi, 2.5px);
+    font-weight: 400;
     margin-bottom: 1rem;
 }
 
+/* links */
 #contact-section > div:first-child > a {
     line-height: 3rem;
     color: var(--font-tertiary);
     text-decoration: none;
 }
 
+/* number */
 #contact-section > div:first-child > a:nth-child(3){
     letter-spacing: clamp(5px, 0.8cqi, 12px);
 }
 
+/* email */
 #contact-section > div:first-child > a:nth-child(4){
     letter-spacing: clamp(2.3px, 0.43cqi, 6.3px);
 }
 
+/* github */
 #contact-section > div:first-child > a:nth-child(5){
     letter-spacing: clamp(1.1px, 0.32cqi, 5.1px);
 }
 
+/* linkedin */
 #contact-section > div:first-child > a:nth-child(6){
     letter-spacing: clamp(0.3px, 0.16cqi, 2.6px);
 }
 
+/* icons */
 #contact-section > div:first-child a:is(:nth-child(3),:nth-child(5))::after,
 #contact-section > div:first-child a:is(:nth-child(4),:nth-child(6))::before {
     background-size: contain;
@@ -139,7 +149,8 @@ html:has(#root[data-theme="dark"]) #contact-section > div:last-child > img {
 
 @media(max-width: 800px){
     #contact-section > div:last-child > img{
-        width: clamp(115px, 20cqmin, 150px);
+        /* width: clamp(115px, 18cqmin, 150px); */
+         width: clamp(110px, 18vw , 120px);
     }
 
     #contact-section {  
