@@ -12,6 +12,7 @@
   --black1: #000000;
   --black2: #1B1B1B;
   --black3: #232323;
+  --black4: #121212;
 
   --gray1: #D2D2D2;
   --gray2: #A5A5A5;
@@ -29,6 +30,7 @@
 
   --radius: 25px;
   --gap: 2px;
+
 }
 
 #root[data-theme="light"]{
@@ -50,7 +52,7 @@
 #root[data-theme="dark"]{
   --bg-primary: var(--black2);
   --bg-secondary: var(--gray4);
-  --bg-tertiary: var(--black1);
+  --bg-tertiary: var(--black4);
 
   --font-primary: var(--white2);
   --font-secondary: var(--black2);
@@ -66,6 +68,7 @@
 
 
 #root * {
+ 
   /* transition: color 0.2s ease-in; */
 }
 
