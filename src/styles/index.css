@@ -14,6 +14,7 @@
   --black3: #232323;
   --black4: #121212;
 
+  --gray0: #dcdcdc;
   --gray1: #D2D2D2;
   --gray2: #A5A5A5;
   --gray3: #5A5A5A;
@@ -36,7 +37,7 @@
 #root[data-theme="light"]{
   --bg-primary: var(--white2);
   --bg-secondary: var(--black2);
-  --bg-tertiary: var(--gray1);
+  --bg-tertiary: var(--gray0);
 
   --font-primary: var(--black2);
   --font-secondary: var(--white2);
@@ -47,6 +48,8 @@
 
   --border: var(--black2);
   --shadow: var(--black2);
+
+  --dots: var(--gray1);
 }
 
 #root[data-theme="dark"]{
@@ -63,6 +66,8 @@
 
   --border: var(--gray4);
   --shadow: var(--gray3);
+
+  --dots: var(--black1);
 }
 
 
