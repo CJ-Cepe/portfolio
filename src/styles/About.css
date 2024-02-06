@@ -12,6 +12,9 @@
     border-radius: var(--radius);
 }
 
+* {
+    /* outline: 1px solid red; */
+}
 /*--------- first div ---------*/
 #about-section > div:first-child {
     flex: 1;
@@ -22,8 +25,8 @@
     align-items: center;
 
     /* RESPONSIVE!!! */
-    gap: 1rem; 
-    padding: 5%;
+    padding: 3%;
+    gap: 1.5rem;
 }
 
 /* canvas cont */
@@ -31,7 +34,7 @@
     width: 200px;
     height: 200px;
     aspect-ratio: 1 / 1;
-    border: 1px black solid;
+    /* border: 1px black solid; */
 }
 
 /* canvas */
@@ -41,9 +44,8 @@
 
 /* p */
 #about-section > div:first-child > p {
-    text-align: justify;
-    text-justify: inter-character;
-    text-indent: 1.5rem;
+    /*  */
+    text-indent: 1rem;
 }
 
 /* --------- last div --------- */
@@ -134,7 +136,8 @@
         flex-direction: column;
     }
 
-    #about-section > div:last-child {
+    /*--------- first & last div ---------*/
+    #about-section > div:is(:first-child, :last-child){
         padding: 5%;
     }
 
