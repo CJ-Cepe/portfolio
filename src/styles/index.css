@@ -5,26 +5,20 @@
   --space: '2rem';
   --radius: '30px';
 
-  --white1: #FFFFFF;
-  --white2: #EDEDED;
-  --white3: #E3E3E3;
+  --white1: #EDEDED;
 
   --black1: #000000;
   --black2: #1B1B1B;
-  --black3: #232323;
-  --black4: #121212;
+  --black3: #121212;
 
-  --gray0: #dcdcdc;
+  --gray0: #dfdfdf;
   --gray1: #D2D2D2;
   --gray2: #A5A5A5;
   --gray3: #5A5A5A;
   --gray4: #2C2C2C;
 
-  --yellow1: #FCFD96;
-  --yellow2: #F4D839;
   --orange1: #ff7a41;
   --purple1: #6216FF;
-
   --blue1: #1282FF;
   --blue2: #103FFF;
   --red1: #DD2231;
@@ -35,12 +29,12 @@
 }
 
 #root[data-theme="light"]{
-  --bg-primary: var(--white2);
+  --bg-primary: var(--white1);
   --bg-secondary: var(--black2);
   --bg-tertiary: var(--gray0);
 
   --font-primary: var(--black2);
-  --font-secondary: var(--white2);
+  --font-secondary: var(--white1);
   --font-tertiary: var(--gray3);
 
   --accent1: var(--purple1);
@@ -55,9 +49,9 @@
 #root[data-theme="dark"]{
   --bg-primary: var(--black2);
   --bg-secondary: var(--gray4);
-  --bg-tertiary: var(--black4);
+  --bg-tertiary: var(--black3);
 
-  --font-primary: var(--white2);
+  --font-primary: var(--white1);
   --font-secondary: var(--black2);
   --font-tertiary: var(--gray2);
 
@@ -68,15 +62,4 @@
   --shadow: var(--gray3);
 
   --dots: var(--black1);
-}
-
-
-
-#root * {
- 
-  /* transition: color 0.2s ease-in; */
-}
-
-* {
- /*  outline: 1px red solid;   */
 }

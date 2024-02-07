@@ -7,6 +7,8 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+    transition: color 0.1s ease-in; 
 }
 
 #root {
@@ -27,16 +29,11 @@ main > div {
     gap: var(--gap);
 }
 
-/* section { 
-    scroll-margin-top: 50px;
-} */
-
 /* ---------- Footer ---------- */
-
 footer {
     color: var(--font-primary);
     background-color: var(--bg-primary);
-    font-size: clamp(12px, 4vw, 20px);
+    font-size: clamp(0.875rem, 1.5vw + 0.125rem, 1.25rem);
 
     width: 95vw;
     min-height: 8vh;
