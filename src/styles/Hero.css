@@ -83,7 +83,6 @@
 
     .hero > button {
         font-size: clamp(0.8rem, 3cqi, 1.2rem);
-       /*  padding: 3cqi 5cqi; */
-       padding: clamp(0.5rem, 3cqi, 1rem) clamp(1rem, 4cqi, 2rem);
+        padding: clamp(0.5rem, 3cqi, 1rem) clamp(1rem, 4cqi, 2rem);
     }
 }

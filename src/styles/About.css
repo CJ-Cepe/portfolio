@@ -45,7 +45,7 @@
 /* p */
 #about-section > div:first-child > p {
     /*  */
-    text-indent: 1rem;
+   /*  text-indent: 1rem; */
 }
 
 /* --------- last div --------- */
