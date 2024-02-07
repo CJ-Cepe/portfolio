@@ -12,16 +12,17 @@ nav {
     justify-items: center;
 }
 
-/* website title */
+/* --------------- website title ---------------*/
 nav > div { 
     grid-column: 1 / 2;
-    width: 85px;
+
     background-color: var(--font-primary);
     color: var(--font-secondary);
+    font-weight: 400;
+    width: 85px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    font-weight: 400;
-
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,11 +37,74 @@ nav > div:hover{
     font-weight:bold;
 }
 
+
+/* --------------- list ---------------*/
+nav > ul {
+    grid-column: 2 / 3;
+    align-self: center;
+
+    list-style-type: none;
+    margin: 0;
+    margin-right: auto;
+    margin-left: 1.5rem;
+    padding: 0 0.5rem;
+    height: 50%;
+    border-radius: var(--radius);
+    border: 2px solid transparent;
+
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    transition: border 0.2s;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--font-primary);
+}
+
+nav > ul > li {
+   border-radius: var(--radius);
+   padding: 3px 10px;
+   transition: background-color 0.2s ease-out;
+}
+
+/* --------------- light mode button ---------------*/
+nav > button {
+    cursor: pointer;
+    grid-column: 3 / 4;
+    align-self: center;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    padding: 0 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+nav > button > img {
+    width: 60px;
+}
+
+nav > button > img[src="/src/assets/moon.svg"] {
+    width: 45px;
+    filter: invert(17%) sepia(90%) saturate(6379%) hue-rotate(235deg) brightness(99%) contrast(106%);
+}
+
+nav > button:hover{
+    transform: scale(1.2);
+}
+
 /* --------------- Sticky --------------- */
 .sticky{
     position: sticky;
     left: 0px; 
-    top:0px;
+    top: 0px;
     z-index: 999 !important;
 }
 
@@ -69,71 +133,6 @@ nav > div:hover{
     color: var(--font-primary);
 }
 
-nav > ul a:hover{
-    color: var(--accent1);
-}
-
-/* --------------- list ---------------*/
-nav > ul {
-    grid-column: 2 / 3;
-    align-self: center;
-
-    list-style-type: none;
-    margin: 0;
-    margin-right: auto;
-    margin-left: 1.5rem;
-    padding: 0 0.5rem;
-    height: 50%;
-
-    border-radius: 30px;
-    border: 2px solid transparent;
-    transition: border 0.2s;
-
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--font-primary);
-}
-
-nav > ul > li {
-   border-radius: 30px;
-   padding: 3px 10px;
-   transition: background-color 0.2s ease-out;
-}
-
-/* --------------- light mode button ---------------*/
-nav > button {
-    cursor: pointer;
-    grid-column: 3 / 4;
-    align-self: center;
-    border: none;
-   /*  border-radius: 50%; */
-    background-color: transparent;
-    padding: 0 0;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.2s, transform 0.2s;
-}
-
-nav > button > img {
-    width: 60px;
-}
-
-nav > button > img[src="/src/assets/moon.svg"] {
-    width: 45px;
-    filter: invert(17%) sepia(90%) saturate(6379%) hue-rotate(235deg) brightness(99%) contrast(106%);
-}
-
-nav > button:hover{
-    transform: scale(1.2);
-}
-
 /* --------------- media queries ---------------*/
 /*600*/
 @media (max-width: 689px){
@@ -154,6 +153,7 @@ nav > button:hover{
         grid-row: 1 / 2;
         grid-column: 1 / 2;
         align-self: center;
+
         width: 3.5rem;
         height: auto;
         padding: 8px 0;
@@ -172,6 +172,7 @@ nav > button:hover{
         height: clamp(30px, 6vw, 50px);
         width: 80%;
         min-width: 200px;
+        max-width: 350px;
         margin-right: 0; 
         margin-left: 0;
         padding: 5px 5px;
@@ -183,7 +184,7 @@ nav > button:hover{
         flex-basis: auto;
         margin-left: 0;
         font-size: clamp(0.9rem, 3vw, 1.2rem);
-        border-radius: 20px;
+        border-radius: var(--radius);
         padding: 1px 5px;
     }
 
@@ -199,8 +200,7 @@ nav > button:hover{
     }
 
     nav > button > img[src="/src/assets/moon.svg"] {
-        width: 30px;
+        width: 25px;
     }
-
 }
     
