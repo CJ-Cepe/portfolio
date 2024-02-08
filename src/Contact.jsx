@@ -6,7 +6,7 @@ import useIntersectionObserver from './useIntersectionObserver'
 
 function Contact(){
     const contactRef = useRef(null)
-    useIntersectionObserver(contactRef, 'pre-appear', 'appear-right')
+    useIntersectionObserver(contactRef, 'pre-appear', 'appear-right', "0px 0px -10px 0px")
 
     return (
         <section id="contact-section" ref={contactRef}>
