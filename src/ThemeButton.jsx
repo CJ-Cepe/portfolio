@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import sun from './assets/sun.svg'
 import moon from './assets/moon.svg'
 
-function ThemeButton(){
+function ThemeButton({buttonRef}){
     const [theme, setTheme] = useState(localStorage.getItem('theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'))
     const [icon, setIcon] = useState(theme === 'light' ? sun : moon);
 
@@ -16,10 +16,10 @@ function ThemeButton(){
         setTheme(newTheme);
         setIcon(newTheme === 'light' ? sun : moon);
     }
-
+    
     return(
         <>
-        <button onClick={toggleTheme} ><img src={icon} data-icon={icon} alt="icon for theme" /></button>
+        <button ref={buttonRef} onClick={toggleTheme} ><img src={icon} data-icon={icon} alt="icon for theme" /></button>
         </>
     )
 }

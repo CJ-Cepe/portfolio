@@ -7,14 +7,7 @@ function Nav(){
     const navRef = useRef(null)
     const titleRef = useRef(null)
     const ulRef = useRef(null)
-    
-    const navObserver = new IntersectionObserver((entries) => {
-        /* console.log(entries[0].isIntersecting) */
-        navRef.current.classList.toggle('sticky', !entries[0].isIntersecting)
-        titleRef.current.classList.toggle('hide', !entries[0].isIntersecting)
-        document.querySelector('nav > button').classList.toggle('hide', !entries[0].isIntersecting)
-        ulRef.current.classList.toggle('styled-list', !entries[0].isIntersecting)
-    }, {rootMargin: "20px 0px 0px 0px"})
+    const buttonRef = useRef(null)
 
     const objRef = useRef({
         "about-section": [false, 0], 
@@ -22,15 +15,26 @@ function Nav(){
         "projects-section": [false, 0], 
         "contact-section": [false, 0]
     })
+    
+    const toggleClasses = (isIntersecting) => {
+        navRef.current.classList.toggle('sticky', !isIntersecting);
+        titleRef.current.classList.toggle('hide', !isIntersecting);
+        buttonRef.current.classList.toggle('hide', !isIntersecting);
+        ulRef.current.classList.toggle('styled-list', !isIntersecting);
+    };
 
-    // Helper function to get the key with the highest ratio
     const getMaxRatioKey = (obj) => {
         return Object.keys(obj).reduce((maxKey, key) => 
             obj[key][0] && obj[key][1] > (maxKey ? obj[maxKey][1] : -Infinity) ? key : maxKey, null);
     };
-    
-    const observer = new IntersectionObserver((entries) => {
+
+    const navObserver = new IntersectionObserver((entries) => {
+        toggleClasses(entries[0].isIntersecting);
+    }, {rootMargin: "20px 0px 0px 0px"})
+
+    const sectionObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
+            console.log(entry.target.id, entry.intersectionRatio, entry.isIntersecting)
             const {target: {id}, isIntersecting, intersectionRatio} = entry;
             objRef.current[id] = [isIntersecting, intersectionRatio];
     
@@ -47,38 +51,36 @@ function Nav(){
     }, {threshold: [0.10, 0.50, 1]});
 
     useEffect(()=> {
-        //give navObserver observe
         if(scrollWatcher.current){
+             //give navObserver observe
             navObserver.observe(scrollWatcher.current)
         }
 
         //give sections observer
         const sections = document.querySelectorAll("#about-section, #skills-section, #projects-section, #contact-section")
-        sections.forEach(section => observer.observe(section));
-            
-        
+        sections.forEach(section => sectionObserver.observe(section));
+
          // Cleanup: stop observing when component unmounts since array is empty
         return () => {
             if (scrollWatcher.current) {
                 navObserver.unobserve(scrollWatcher.current);
-                sections.forEach(section => observer.unobserve(section));
+                 sections.forEach(section => sectionObserver.unobserve(section));
             }
         }
     }, [])
 
-    
     return (
         <>
         <div ref={scrollWatcher} aria-hidden="true"></div>
         <nav ref={navRef}>
-            <div ref={titleRef}>CJ <span>Cepe</span></div>
+            <div ref={titleRef}>CJ<span>Cepe</span></div>
             <ul ref={ulRef}>
                 <li><a href="#about-section">About</a></li>
                 <li><a href="#skills-section">Skills</a></li>
                 <li><a href="#projects-section">Projects</a></li>
                 <li><a href="#contact-section">Contact</a></li>
             </ul>
-            <ThemeButton />
+            <ThemeButton buttonRef = {buttonRef} />
         </nav>
         </>
     )
