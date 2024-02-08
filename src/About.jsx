@@ -51,13 +51,13 @@ function Training(){
 
 function About(){
     const aboutRef = useRef(null)
-    useIntersectionObserver(aboutRef, 'pre-appear', 'appear-up')
+    useIntersectionObserver(aboutRef, 'pre-appear', 'appear-up', '0px 0px -100px 0px')
     
     return (
         <section id="about-section" className="about" ref={aboutRef}>
             <div>
                 <Suspense fallback={<div>Loading...</div>}>
-                    <div><Spline scene="./src/assets/scene.splinecode"/></div>
+                    <div>{/* <Spline scene="./src/assets/scene.splinecode"/> */}</div>
                 </Suspense>
                 <p className='pre-appear'>{data.background.firstParagraph}</p>
                 <p className='pre-appear'>{data.background.secondParagraph}</p>
