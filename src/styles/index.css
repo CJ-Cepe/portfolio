@@ -17,12 +17,12 @@
   --gray3: #5A5A5A;
   --gray4: #2C2C2C;
 
-  --orange1: #ff7a41;
+  --yellow1: #FADF0C;
+  --yellow2: #F4D839;
   --purple1: #6216FF;
   --blue1: #1282FF;
   --blue2: #103FFF;
-  --red1: #DD2231;
-
+  
   --radius: 25px;
   --gap: 2px;
 
@@ -38,7 +38,7 @@
   --font-tertiary: var(--gray3);
 
   --accent1: var(--purple1);
-  --accent2: var(--orange1);
+  --accent2: var(--yellow1);
 
   --border: var(--black2);
   --shadow: var(--black2);
@@ -56,7 +56,7 @@
   --font-tertiary: var(--gray2);
 
   --accent1: var(--blue1);
-  --accent2: var(--red1);
+  --accent2: var(--yellow2);
 
   --border: var(--gray4);
   --shadow: var(--gray3);
