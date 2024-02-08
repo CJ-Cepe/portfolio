@@ -29,14 +29,8 @@ nav > div {
     align-items: center;
     text-align: center;
 
-    transition: opacity 0.5s, transform 0.3s, color 0.2s;
+    transition: opacity 0.5s, transform 0.3s;
 }
-
-nav > div:hover{
-    color: var(--accent2);
-    font-weight:bold;
-}
-
 
 /* --------------- list ---------------*/
 nav > ul {
