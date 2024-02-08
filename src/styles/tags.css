@@ -95,16 +95,17 @@
 .tag[data-value="notion" i] {
     background-color: white;
     color: black;
+    border: 2px solid black;
 }
 
 .tag[data-value="ms office suite" i] {
-    background-color: white;
-    color: #FF5722;
+    background-color: #FF5722;
+    color: white;
 }
 
 .tag[data-value="google workspace" i] {
-    background-color: white;
-    color: #00AC48;
+    background-color: #00AC48;
+    color: white;
 }
 
 /*================ Communication ================*/
@@ -133,8 +134,9 @@
     color: white; 
 }
 .tag[data-value="java" i] {
-    background-color: white;
-    color: #4AA8D5;
+    background-color: #bbd9e7;
+    color: #EC2025;
+    
 }
 .tag[data-value="python" i] {
     background-color: #376F9F;
@@ -153,8 +155,8 @@
     color: white;
 }
 .tag[data-value="visual basic" i] {
-    background-color: white;
-    color: #0C36AC;
+    background-color: #0C36AC;
+    color: white;
 }
 .tag[data-value="Turbo C++" i] {
     background-color: #6F6F6F;
@@ -173,16 +175,16 @@
     color: #3A4972;
 }
 .tag[data-value="IntelliJ IDEA" i] {
-    background-color: #137CF0;
-    color: black;
+    background-color: #F73461;
+    color: #000000;
 }
 .tag[data-value="Jupyter Notebook" i] {
-    background-color: white;
-    color: #F37726;
+    background-color: #F37726;
+    color: #3b3b3b;
 }
 .tag[data-value="Anaconda" i] {
-    background-color: white;
-    color: #41AF28;
+    background-color: #41AF28;
+    color: white;
 }
 .tag[data-value="Google Collab" i] {
     background-color: #E8710A;
@@ -197,28 +199,28 @@
     color: white;
 }
 .tag[data-value="MATLAB" i] {
-    background-color: white;
-    color: #FFA600;
+    background-color: #FFA600;
+    color: black;
 }
 .tag[data-value="Cisco packet tracer" i] {
     background-color: #0A8AF7;
     color: white;
 }
 .tag[data-value="Lucid Chart" i] {
-    background-color: white;
-    color: #F78D1E;
+    background-color: #F78D1E;
+    color: rgb(60, 60, 60);
 }
 .tag[data-value="Access" i] {
     background-color: #B02233;
     color: white;
 }
 .tag[data-value="MySql" i] {
-    background-color: white;
-    color: #A5BECD;
+    background-color: #5382A1;
+    color: white;
 }
 .tag[data-value="JavaFX Scene Builder" i] {
-    background-color: white;
-    color: #E76F00;
+    background-color: #E76F00;
+    color: white;
 }
 .tag[data-value="Bootstrap Studio" i] {
     background-color: #BA58F2;
@@ -250,41 +252,41 @@
 }
 .tag[data-value="Obsidian" i] {
     background-color: #181E52;
-    color: #7133D2;
+    color: #8b5cd5;
 }
 .tag[data-value="Numpy" i] {
-    background-color: white;
-    color: #4D77CF;
+    background-color: #4D77CF;
+    color: white;
 }
 .tag[data-value="Pandas" i] {
-    background-color: white;
-    color: #180D58;
+    background-color: #180D58;
+    color: white;
 }
 .tag[data-value="Matplotlib" i] {
-    background-color: white;
-    color: #205A7E;
+    background-color: #205A7E;
+    color: white;
 }
 .tag[data-value="TensorFlow" i] {
-    background-color: white;
-    color: #ED8E24;
+    background-color: #ED8E24;
+    color: white;
 }
 .tag[data-value="Scikit-learn" i] {
     background-color: #F89939;
     color: #010101;
 }
 .tag[data-value="PyTorch" i] {
-    background-color: white;
-    color: #EE4C2C;
+    background-color: #EE4C2C;
+    color: white;
 }
 .tag[data-value="Flask" i] {
-    background-color: white;
-    color: black;
+    background-color: #3EABBF;
+    color: white;
 }
 .tag[data-value="NodeJs" i] {
     background-color: #83CD29;
     color: #414238;
 }
 .tag[data-value="Express" i] {
-    background-color: white;
+    background-color: #EDD82E;
     color: black;
 }
