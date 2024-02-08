@@ -34,7 +34,6 @@ function Nav(){
 
     const sectionObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            console.log(entry.target.id, entry.intersectionRatio, entry.isIntersecting)
             const {target: {id}, isIntersecting, intersectionRatio} = entry;
             objRef.current[id] = [isIntersecting, intersectionRatio];
     
