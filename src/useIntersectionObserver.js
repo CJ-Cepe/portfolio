@@ -4,7 +4,6 @@ function useIntersectionObserver(ref, classToQuery, classToAdd, rootMarginVal = 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if(entry.isIntersecting){
-                console.log(entry.target.className, entry.intersectionRatio)
                 entry.target.classList.add(classToAdd);
                 observer.unobserve(entry.target)
             }
