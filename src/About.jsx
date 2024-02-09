@@ -49,13 +49,39 @@ function Training(){
 
 function About(){
     const aboutRef = useRef(null)
+    const emojiRef = useRef(null)
+    const emojiContRef = useRef(null)
     useIntersectionObserver(aboutRef, 'pre-appear', 'appear-up', '0px 0px -100px 0px')
     
+    function handleMouseLeave(e){
+        emojiRef.current.style.setProperty("--xDeg", 0);
+        emojiRef.current.style.setProperty("--yDeg", 0);
+    }
+    
+    function rotateElement(e){
+        //get mouse position
+        const x = e.clientX
+        const y = e.clientY
+
+        //get cont's middle
+        const square = emojiContRef.current.getBoundingClientRect();
+        const midX = square.left + square.width / 2;
+        const midY = square.top + square.height / 2
+
+        //get offset from middle 
+        const offsetX = ((x - midX) / midX) * 80;
+        const offsetY = ((y - midY) / midY) * 80;
+
+        emojiRef.current.style.setProperty("--xDeg", -1 * offsetY + "deg");
+        emojiRef.current.style.setProperty("--yDeg", offsetX + "deg");
+    }
+
     return (
         <section id="about-section" className="about" ref={aboutRef}>
-            
             <div>
-                <div> 👦 </div>
+                <div className='pre-appear' ref={emojiContRef}> 
+                    <div className="faceEmoji" ref={emojiRef} onMouseMove={rotateElement} onMouseLeave={handleMouseLeave}>🧑‍💻</div> 
+                </div>
                 <p className='pre-appear'>{data.background.firstParagraph}</p>
                 <p className='pre-appear'>{data.background.secondParagraph}</p>
             </div>

@@ -34,11 +34,26 @@
     font-size: clamp(5rem, 10cqw, 10rem);
     width: clamp(7rem, 15cqw, 13rem);
     aspect-ratio: 1 / 1;
-    /* border: 1px black solid; */
+    /* border: 2px solid var(--bg-secondary);
+    border-radius: var(--radius); */
 
     display: flex;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
+    overflow: hidden;
+    perspective: 5000px;
+    transform-style: preserve-3d;
+}
+
+#about-section > div:first-child .faceEmoji{
+    /* background-color: antiquewhite; */
+    transition: transform 100ms ease;
+    height: 150%;
+    aspect-ratio: 1/1;
+    transform: rotateY(var(--yDeg)) rotateX(var(--xDeg));
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 }
 
