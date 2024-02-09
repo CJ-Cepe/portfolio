@@ -29,17 +29,17 @@
     gap: 1.5rem;
 }
 
-/* canvas cont */
+/* emoji cont */
 #about-section > div:first-child > div:first-child{
-    width: 200px;
-    height: 200px;
+    font-size: clamp(5rem, 10cqw, 10rem);
+    width: clamp(7rem, 15cqw, 13rem);
     aspect-ratio: 1 / 1;
     /* border: 1px black solid; */
-}
 
-/* canvas */
-#about-section > div:first-child > div:first-child > canvas{
-
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    
 }
 
 /* p */

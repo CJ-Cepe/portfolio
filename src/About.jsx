@@ -1,6 +1,5 @@
 import './styles/About.css'
 import {About as data} from './info.json'
-import SplineModel from './Spline'
 import { useRef } from 'react'
 import useIntersectionObserver from './useIntersectionObserver'
 
@@ -54,8 +53,9 @@ function About(){
     
     return (
         <section id="about-section" className="about" ref={aboutRef}>
+            
             <div>
-                <SplineModel/>
+                <div> 👦 </div>
                 <p className='pre-appear'>{data.background.firstParagraph}</p>
                 <p className='pre-appear'>{data.background.secondParagraph}</p>
             </div>
