@@ -5,7 +5,7 @@ function SplineModel() {
     return (
         <div>
             <Suspense fallback={<div>Loading...</div>}>
-                    <Spline scene="https://prod.spline.design/y3VevNB21VcWXQcT/scene.splinecode"/>
+                    <Spline scene="./assets/scene.splinecode"/>
             </Suspense>
         </div>
     )
