@@ -3,8 +3,6 @@ import {About as data} from './info.json'
 import { useRef } from 'react'
 import useIntersectionObserver from './useIntersectionObserver'
 
-
-
 function Experience() {
     const {main, secondary, location, date, details} = data.experience
     const detailList = details.map((detail, index)=>
@@ -79,8 +77,8 @@ function About(){
     return (
         <section id="about-section" className="about" ref={aboutRef}>
             <div>
-                <div className='pre-appear' ref={emojiContRef}> 
-                    <div className="faceEmoji" ref={emojiRef} onMouseMove={rotateElement} onMouseLeave={handleMouseLeave}>🧑‍💻</div> 
+                <div className='pre-appear' ref={emojiContRef} onMouseMove={rotateElement} onMouseLeave={handleMouseLeave}> 
+                    <div className="emoji" ref={emojiRef} >🧑‍💻</div> 
                 </div>
                 <p className='pre-appear'>{data.background.firstParagraph}</p>
                 <p className='pre-appear'>{data.background.secondParagraph}</p>
