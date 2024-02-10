@@ -21,7 +21,7 @@ function Card({project}){
     let demoElement = null;
 
     if(videoSource){
-        mediaElement =  <video ref={videoRef} poster={imgSrc} src={vidSrc}  type="video/mp4" width="100%" loop muted></video>
+        mediaElement =  <video ref={videoRef} poster={imgSrc} src={vidSrc}  type="video/mp4" width="100%" loop preload="none" muted></video>
     } else {
         mediaElement = <img loading ="lazy" decoding="async" src={imgSrc} alt=""  width="100%"/> 
     }
@@ -33,7 +33,15 @@ function Card({project}){
     useEffect(()=>{
         const videoElement = videoRef.current;
 
-        const handleMouseOver = () => videoElement.play();
+        const handleMouseOver = () => {
+            const videoElemProm = videoElement.play();
+            if(videoElemProm !== undefined){
+                videoElemProm.catch(error => {
+                    //console.error('Playback failed:', error)
+                })
+            }
+        }
+
         const handleMouseOut = () => {
             videoElement.pause();       
             videoElement.load();
