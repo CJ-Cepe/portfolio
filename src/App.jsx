@@ -22,8 +22,11 @@ function App() {
         <meta name='description' content='Beginner friendly page for learning React Helmet.' />
 
         <link rel="icon" type="image/jpg" href="/your-icon-name.ico" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;600;800;900&display=swap" rel="stylesheet" />
       </Helmet>
     <Nav/>
     <main>
