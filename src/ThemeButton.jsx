@@ -19,7 +19,7 @@ function ThemeButton({buttonRef}){
     
     return(
         <>
-        <button ref={buttonRef} onClick={toggleTheme} ><img src={icon} data-icon={icon} alt="icon for theme" /></button>
+        <button ref={buttonRef} onClick={toggleTheme} ><img src={icon} data-icon={icon} width="60" height="60" alt="icon for theme" /></button>
         </>
     )
 }
