@@ -8,6 +8,7 @@ import Marquee from './Marquee'
 import './styles/App.css'
 import './styles/animation.css'
 import { useEffect } from 'react'
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 function App() { 
   useEffect(() => {
@@ -15,7 +16,15 @@ function App() {
   }, []);
 
   return (
-    <>
+    <HelmetProvider>
+      <Helmet>
+        <title>My Portfolio</title>
+        <meta name='description' content='Beginner friendly page for learning React Helmet.' />
+
+        <link rel="icon" type="image/jpg" href="/your-icon-name.ico" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+      </Helmet>
     <Nav/>
     <main>
       <Hero/>
@@ -30,8 +39,7 @@ function App() {
         </footer>
       </div>
     </main>
-    
-    </>
+    </HelmetProvider>
   )
 }
 
