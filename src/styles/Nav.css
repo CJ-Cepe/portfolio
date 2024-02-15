@@ -83,6 +83,7 @@ nav > button {
 
 nav > button > img {
     width: 60px;
+    height: auto;
 }
 
 nav > button > img[src="/src/assets/moon.svg"] {
