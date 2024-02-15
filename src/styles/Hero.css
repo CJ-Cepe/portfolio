@@ -41,11 +41,15 @@
     color: var(--accent1);
 }
 
-.hero > button {
+.hero > a {
+    color: var(--black1);
+    background-color: var(--white1);
     font-size: 1rem;
-    padding: 1rem 2rem;
+    font-weight: 600;
+    padding: 0.9rem 1rem;
     margin-top: 2rem;
     border-radius: 10px;
+    text-decoration: none;
 
     border: 2px solid var(--border);
     box-shadow: 3px 3px 0px 0px var(--shadow);
@@ -55,8 +59,12 @@
     transition: background-color 0.2s ease-out;
 }
 
-.hero > button:hover {
+.hero > a:hover {
     background-color: var(--accent2);
+}
+
+.hero > a:visited {
+    color: var(--black1);
 }
 
 @media(max-width: 600px){
@@ -81,8 +89,8 @@
         max-width: 50ch;
     }
 
-    .hero > button {
+    .hero > a {
         font-size: clamp(0.8rem, 3cqi, 1.2rem);
-        padding: clamp(0.5rem, 3cqi, 1rem) clamp(1rem, 4cqi, 2rem);
+        padding: clamp(0.5rem, 2.33vw + 0.0625rem, 0.9375rem) clamp(0.625rem, 2vw + 0.25rem, 1rem);
     }
 }
