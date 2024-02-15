@@ -80,8 +80,12 @@ function About(){
                 <div className='pre-appear' ref={emojiContRef} onMouseMove={rotateElement} onMouseLeave={handleMouseLeave}> 
                     <div className="emoji" ref={emojiRef} >🧑‍💻</div> 
                 </div>
-                <p className='pre-appear'>{data.background.firstParagraph}</p>
-                <p className='pre-appear'>{data.background.secondParagraph}</p>
+                <p className='pre-appear'>{data.background.text}</p>
+                <ul>
+                    <li className='pre-appear'>{data.background.bulletOne}</li>
+                    <li className='pre-appear'>{data.background.bulletTwo}</li>
+                </ul>
+
             </div>
             <div>
                 <Experience/>
