@@ -42,7 +42,7 @@
 
 .tag[data-value="webpack" i] {
     background-color: #8ED6FB;
-    color: #1C78C0;
+    color: #135c93;
 }
 
 .tag[data-value="vite" i] {
@@ -59,6 +59,11 @@
 .tag[data-value="jest" i] {
     background-color: #3B3738;
     color: #da431a;
+}
+
+.tag[data-value="babel" i] {
+    background-color: #323330;
+    color: #F9DC3E;
 }
 
 .tag[data-value="npm" i] {
@@ -129,7 +134,7 @@
 
 /*================ Others ================*/
 
-.tag[data-value="C/C++" i] {
+.tag[data-value="C" i] {
     background-color: #0180CD;
     color: white; 
 }
@@ -154,7 +159,8 @@
     background-color: #00BCF2;
     color: white;
 }
-.tag[data-value="visual basic" i] {
+.tag[data-value="visual basic" i],
+.tag[data-value="vb" i] {
     background-color: #0C36AC;
     color: white;
 }
@@ -218,7 +224,11 @@
     background-color: #5382A1;
     color: white;
 }
-.tag[data-value="JavaFX Scene Builder" i] {
+.tag[data-value="JavaFX" i] {
+    background-color: #E76F00;
+    color: #20333d;
+}
+.tag[data-value="Scene Builder" i] {
     background-color: #E76F00;
     color: white;
 }
@@ -229,6 +239,10 @@
 .tag[data-value="Photoshop" i] {
     background-color: #001E36;
     color: #31A8FF;
+}
+.tag[data-value="Spline" i] {
+    background-color: #FF3BF3;
+    color: #372236;
 }
 .tag[data-value="Effect House" i] {
     background-color: #4C318A;

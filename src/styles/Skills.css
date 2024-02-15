@@ -74,10 +74,33 @@
     gap: 0.5rem;
 }
 
+/* others */
+#skills-section > div:nth-child(2) > .skills-segment{
+    padding: 5%;
+    display: block;
+}
+
+#skills-section > div:nth-child(2) h2 {
+    display: inline;
+}
+
+#skills-section > div:nth-child(2) p {
+    font-style: italic;
+    display: inline;
+    margin-left: 1rem;
+    color: var(--font-tertiary);
+    font-size: clamp(0.75rem, 1vw + 0.25rem, 1rem);
+}
+
+#skills-section > div:nth-child(2) ul {
+    margin-top: 1rem;
+}
+
 /* tags in others */
 #skills-section > div:nth-child(2) .tag {
     font-size: clamp(0.625rem, 1.5vw + -0.125rem, 1rem);
 }
+
 
 /* ----- Arrows ----- */
 #skills-section > div:nth-child(3){

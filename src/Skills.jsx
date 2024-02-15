@@ -14,10 +14,19 @@ function Segment({group}){
     const tags = value.map((tag, index) => {
         return <li key={index} data-value={tag} className='tag'>{tag}</li>
     })
+    
+    function showDisclaimer(){
+        if(key === 'others'){
+            return <p>Technologies I've utilized across various tasks and projects throughout my tech journey, some of which used to be my specialty</p>
+        } else {
+            return null
+        }
+    }
 
     return (
         <div className="skills-segment pre-appear">
             <h2>{key}</h2>
+            {showDisclaimer()}
             <ul>{tags}</ul>
         </div>
     )
