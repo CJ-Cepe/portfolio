@@ -23,11 +23,11 @@ function Card({project}){
     if(videoSource){
         mediaElement =  <video ref={videoRef} poster={imgSrc} src={vidSrc}  type="video/mp4" width="100%" loop preload="none" muted></video>
     } else {
-        mediaElement = <img loading ="lazy" decoding="async" src={imgSrc} alt=""  width="100%"/> 
+        mediaElement = <img loading ="lazy" decoding="async" src={imgSrc} alt={name + " screenshot"}  width="100%"/> 
     }
 
     if(demo){
-        demoElement = <a href={demo}>Live Demo</a>
+        demoElement = <a href={demo} target='_blank'>Demo</a>
     }
 
     useEffect(()=>{
@@ -72,7 +72,7 @@ function Card({project}){
                 <ul>{toolList}</ul>
                 <p>{description}</p>
                 <div>
-                    <a href={source}>Source Code</a>
+                    <a href={source} target='_blank'>Source</a>
                     {demoElement}
                 </div>
             </div>
