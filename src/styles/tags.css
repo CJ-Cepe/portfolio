@@ -108,7 +108,8 @@
     color: white;
 }
 
-.tag[data-value="google workspace" i] {
+.tag[data-value="google workspace" i],
+.tag[data-value="Gdrive" i]  {
     background-color: #00AC48;
     color: white;
 }
@@ -192,7 +193,8 @@
     background-color: #41AF28;
     color: white;
 }
-.tag[data-value="Google Collab" i] {
+.tag[data-value="Google Collab" i],
+.tag[data-value="Collab" i] {
     background-color: #E8710A;
     color: white;
 }
@@ -303,4 +305,12 @@
 .tag[data-value="Express" i] {
     background-color: #EDD82E;
     color: black;
+}
+.tag[data-value="Socket.IO" i] {
+    background-color: #a9c9c6;
+    color: black;
+}
+.tag[data-value="Powerpoint" i] {
+    background-color: #D45230;
+    color: white;
 }
