@@ -63,7 +63,7 @@
   .hero > a {
     opacity: 0;
     animation: fade-in 1s ease-out forwards;
-    animation-delay: 1s;
+    animation-delay: 0.8s;
   }
 
   /* ------------- about section ------------- */
