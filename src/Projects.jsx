@@ -13,8 +13,10 @@ function getToolList(tools){
 
 function Card({project}){
     const {name, date, demo, tools, source, description, imageSource, videoSource} = project
-    const imgSrc = getUrl(imageSource)
-    const vidSrc = getUrl(videoSource) 
+    /* const imgSrc = getUrl(imageSource)
+    const vidSrc = getUrl(videoSource)  */
+    const imgSrc = imageSource
+    const vidSrc = videoSource
     const toolList = getToolList(tools)
     const videoRef = useRef(null)
     let mediaElement = null;
