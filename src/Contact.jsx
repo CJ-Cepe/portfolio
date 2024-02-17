@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react'
 import './styles/Contact.css'
-import circularText from './assets/circular-text.svg'
+import circularText from 'assets/circular-text.svg'
 import useIntersectionObserver from './useIntersectionObserver'
 
 
