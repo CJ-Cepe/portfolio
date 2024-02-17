@@ -56,7 +56,7 @@
         "source": "https://github.com/CJ-Cepe/portfolio",
         "demo": null,
         "imageSource": "./assets/imgs/portfolio.webp",
-        "videoSource": null,
+        "videoSource": "./assets/vids/portfolio.mp4",
         "altText" : "Portfolio",
         "description": "This portfolio website, which you're currently browsing, is a project in itself. It serves as a platform to display my projects, provide an overview of my credentials, and share contact details, as well as a practice for React and Vite."},
         
