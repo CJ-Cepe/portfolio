@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react'
+import { useRef } from 'react'
 import {Skills as data} from './info.json'
 import './styles/Skills.css'
 import './styles/tags.css'
@@ -17,7 +17,7 @@ function Segment({group}){
     
     function showDisclaimer(){
         if(key === 'others'){
-            return <p>Technologies I've utilized across various tasks and projects throughout my tech journey, some of which used to be my specialty</p>
+            return <p>Technologies I&apos;ve utilized across various tasks and projects throughout my tech journey, some of which used to be my specialty</p>
         } else {
             return null
         }

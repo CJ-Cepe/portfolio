@@ -13,8 +13,8 @@ function getToolList(tools){
 
 function Card({project}){
     const {name, date, demo, tools, source, description, imageSource, videoSource} = project
-    /* const imgSrc = getUrl(imageSource)
-    const vidSrc = getUrl(videoSource)  */
+    /*const imgSrc = getUrl(imageSource)
+    const vidSrc = getUrl(videoSource)*/
     const imgSrc = imageSource
     const vidSrc = videoSource
     const toolList = getToolList(tools)
@@ -29,7 +29,7 @@ function Card({project}){
     }
 
     if(demo){
-        demoElement = <a href={demo} target='_blank'>Demo</a>
+        demoElement = <a href={demo} target='_blank' rel='noreferrer'>Demo</a>
     }
 
     useEffect(()=>{
@@ -74,7 +74,7 @@ function Card({project}){
                 <ul>{toolList}</ul>
                 <p>{description}</p>
                 <div>
-                    <a href={source} target='_blank'>Source</a>
+                    <a href={source} target='_blank' rel='noreferrer'>Source</a>
                     {demoElement}
                 </div>
             </div>

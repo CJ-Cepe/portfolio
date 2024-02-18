@@ -51,7 +51,7 @@ function About(){
     const emojiContRef = useRef(null)
     useIntersectionObserver(aboutRef, 'pre-appear', 'appear-up', '0px 0px -100px 0px')
     
-    function handleMouseLeave(e){
+    function handleMouseLeave(){
         emojiRef.current.style.setProperty("--xDeg", 0);
         emojiRef.current.style.setProperty("--yDeg", 0);
     }
