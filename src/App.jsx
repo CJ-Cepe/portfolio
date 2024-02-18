@@ -5,11 +5,14 @@ import Skills from './Skills'
 import Contact from './Contact'
 import Projects from './Projects'
 import Marquee from './Marquee'
+import printBanner from './printBanner'
 import './styles/App.css'
 import './styles/animation.css'
 import { useEffect } from 'react'
 
 function App() { 
+  printBanner()
+  
   useEffect(() => {
     window.history.scrollRestoration = 'manual'
   }, []);
