@@ -72,7 +72,7 @@ function Nav(){
         <>
         <div ref={scrollWatcher} aria-hidden="true"></div>
         <nav ref={navRef}>
-            <div ref={titleRef}>CJ<span>Cepe</span></div>
+            <div ref={titleRef}><span>CJ</span><span>Cepe</span></div>
             <ul ref={ulRef}>
                 <li><a href="#about-section">About</a></li>
                 <li><a href="#skills-section">Skills</a></li>
