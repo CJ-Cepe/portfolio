@@ -1,5 +1,5 @@
 import {Projects as data} from './info.json'
-import './styles/Project.css'
+import './styles/Projects.css'
 import { useRef, useEffect } from 'react'
 import useIntersectionObserver from './useIntersectionObserver'
 
