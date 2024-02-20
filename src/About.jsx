@@ -39,7 +39,7 @@ function Training(){
         )
     return (
         <div className="about-segment pre-appear">
-            <h2>Trainings/Certificates</h2>
+            <h2>Certificates/Training</h2>
             {details}
         </div>
     )
