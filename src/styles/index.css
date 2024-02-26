@@ -1,5 +1,5 @@
 :root {
-  --font1: 'Hanken Grotesk', 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font1: 'Hanken Grotesk', 'Inter', system-ui, Avenir, Helvetica, Arial, 'Noto Color Emoji', sans-serif;
   --space: '2rem';
   --radius: '30px';
 
