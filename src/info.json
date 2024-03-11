@@ -52,6 +52,12 @@
         ]
     },
     "Projects": [
+        {"name": "HueMore Color Picker", "date": "2024", "tools": ["html", "css", "react", "vite", "figma", "Illustrator"], 
+        "source": "https://github.com/CJ-Cepe/color-picker",
+        "demo": null,
+        "imageSource": "/portfolio/imgs/color.webp",
+        "videoSource": "/portfolio/vids/color.mp4",
+        "description": "A chrome extension for color picking. Born out of a personal need to pick colors from the web quickly, and as a practice project. Users can select a pixel, generate its code, and copy with a click. Supports HEX, RGB, HSL, CMYK."},
         {"name": "Portfolio", "date": "2024", "tools": ["html", "css", "react", "vite", "figma"], 
         "source": "https://github.com/CJ-Cepe/portfolio",
         "demo": null,
