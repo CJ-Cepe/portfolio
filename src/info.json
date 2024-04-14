@@ -55,7 +55,7 @@
         {"name": "Element Outliner", "date": "2024", "tools": ["html", "css", "react", "vite", "figma"], 
         "source": "https://github.com/CJ-Cepe/outliner",
         "demo": null,
-        "imageSource": "/portfolio/imgs/outliner.jpg",
+        "imageSource": "/imgs/outliner.jpg",
         "videoSource": null,
         "description": "A Chrome extension that applies an outline style to elements. Users can customize the outline properties and target specific elements using selectors."},
         {"name": "HueMore Color Picker", "date": "2024", "tools": ["html", "css", "react", "vite", "figma", "Illustrator"], 
